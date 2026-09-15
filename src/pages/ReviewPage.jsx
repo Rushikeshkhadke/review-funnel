@@ -15,7 +15,17 @@ export default function ReviewPage() {
 
   useEffect(() => {
     fetchClient();
+    logScan();
   }, [clientId]);
+
+  const logScan = async () => {
+    // We increment the scan count in the background via a database function
+    try {
+      await supabase.rpc('increment_scan', { c_id: clientId });
+    } catch (e) {
+      console.error("Failed to log scan", e);
+    }
+  };
 
   const fetchClient = async () => {
     try {
@@ -70,13 +80,7 @@ export default function ReviewPage() {
   const getGoogleReviewUrl = (baseUrl) => {
     if (!baseUrl) return '#';
     let url = baseUrl.trim();
-    
-    if (!url.startsWith('http://') && !url.startsWith('https://')) {
-      url = 'https://' + url;
-    }
-    
-    // We removed the code that adds ",5" to the URL.
-    // Appending ",5" to a PlaceID URL invalidates the Place ID and causes Google to NOT open the review box!
+    if (!url.startsWith('http://') && !url.startsWith('https://')) url = 'https://' + url;
     return url;
   };
 

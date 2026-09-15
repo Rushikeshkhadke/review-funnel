@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from 'react';
-import { Plus, Download, ExternalLink, Copy, Check, Trash2, Edit, RefreshCw } from 'lucide-react';
+import { Plus, Download, ExternalLink, Copy, Check, Trash2, Edit, RefreshCw, BarChart2 } from 'lucide-react';
 import { supabase } from '../utils/supabase';
 import ClientForm from '../components/ClientForm';
 import { QRCodeSVG } from 'qrcode.react';
@@ -46,22 +46,27 @@ export default function Dashboard() {
     const svg = document.getElementById('qr-' + clientId);
     if (!svg) return;
 
-    const svgData = new XMLSerializer().serializeToString(svg);
+    let svgData = new XMLSerializer().serializeToString(svg);
+    // Force SVG to render at high resolution (1024x1024) for print quality
+    svgData = svgData.replace(/width="[^"]+"/, 'width="1024"').replace(/height="[^"]+"/, 'height="1024"');
+    
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     const img = new Image();
 
     img.onload = () => {
-      canvas.width = img.width + 40;
-      canvas.height = img.height + 40;
+      // Add a nice 40px white border for safe scanning zone
+      canvas.width = 1104; 
+      canvas.height = 1104;
       if (ctx) {
         ctx.fillStyle = '#ffffff';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 20, 20);
-        const pngUrl = canvas.toDataURL('image/png');
+        ctx.drawImage(img, 40, 40, 1024, 1024);
+        
+        const pngUrl = canvas.toDataURL('image/png', 1.0);
         const downloadLink = document.createElement('a');
         downloadLink.href = pngUrl;
-        downloadLink.download = brandName.replace(/[^a-zA-Z0-9]/g, '_') + '_QR.png';
+        downloadLink.download = brandName.replace(/[^a-zA-Z0-9]/g, '_') + '_HighQuality_QR.png';
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);
@@ -82,7 +87,7 @@ export default function Dashboard() {
             <h1 className="text-3xl sm:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">
               Review Funnels
             </h1>
-            <p className="text-gray-400 text-sm mt-1">Manage your clients and generate smart review pages.</p>
+            <p className="text-gray-400 text-sm mt-1">Manage your clients and track their performance.</p>
           </div>
           <button 
             onClick={() => setShowModal(true)} 
@@ -130,18 +135,23 @@ export default function Dashboard() {
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-center bg-white p-4 rounded-2xl mb-4">
+                    <div className="flex flex-col items-center justify-center bg-white p-4 rounded-2xl mb-4 relative group">
                       <QRCodeSVG 
                         id={'qr-' + client.id}
                         value={reviewUrl} 
-                        size={120}
+                        size={140}
                         level="H"
                         includeMargin={false}
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between px-3 py-2 bg-white/5 rounded-xl border border-white/5">
+                       <span className="text-xs text-gray-400 flex items-center gap-1.5"><BarChart2 size={14}/> Total Scans</span>
+                       <span className="text-sm font-bold text-white">{client.scans || 0}</span>
+                    </div>
+
                     <div className="grid grid-cols-2 gap-2">
                       <button
                         onClick={() => copyLink(client.id)}
