@@ -109,18 +109,18 @@ export default function Dashboard() {
               return (
                 <div key={client.id} className="p-5 border border-white/10 rounded-3xl bg-white/5 backdrop-blur-xl flex flex-col justify-between hover:border-white/20 transition-all shadow-xl group relative">
                   <div>
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
+                    <div className="flex items-start justify-between mb-4 gap-2">
+                      <div className="flex items-center gap-3 min-w-0 flex-1">
                         <div className="w-12 h-12 rounded-xl p-2 bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
                           <img src={client.logo_url} alt={client.brand_name} className="max-h-full max-w-full object-contain" />
                         </div>
-                        <div className="overflow-hidden">
+                        <div className="min-w-0 flex-1">
                           <h3 className="text-base font-bold leading-snug truncate" title={client.brand_name}>{client.brand_name}</h3>
-                          <p className="text-[10px] text-gray-400 uppercase tracking-wider">{client.business_type}</p>
+                          <p className="text-[10px] text-gray-400 uppercase tracking-wider truncate">{client.business_type}</p>
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-1 shrink-0">
                         <button onClick={() => setEditingClient(client)} className="text-gray-500 hover:text-blue-400 transition-colors p-1.5 rounded-lg hover:bg-blue-500/10" title="Edit Client">
                           <Edit size={14} />
                         </button>
