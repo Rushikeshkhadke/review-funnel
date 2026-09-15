@@ -1,6 +1,6 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { supabase } from '../utils/supabase';
-import Vibrant from 'node-vibrant';
+import { Vibrant } from 'node-vibrant/browser';
 import { X } from 'lucide-react';
 
 export default function ClientForm({ onClose, onComplete, initialData }) {
