@@ -67,20 +67,16 @@ export default function ReviewPage() {
     }
   };
 
-  const getGoogleReviewUrl = (baseUrl, rating) => {
+  const getGoogleReviewUrl = (baseUrl) => {
     if (!baseUrl) return '#';
     let url = baseUrl.trim();
     
     if (!url.startsWith('http://') && !url.startsWith('https://')) {
       url = 'https://' + url;
     }
-
-    if (url.includes('writereview') || url.includes('placeid')) {
-      url = url.replace(/,\d+$/, '');
-      if (!url.endsWith(',' + rating)) {
-        url = url + ',' + rating;
-      }
-    }
+    
+    // We removed the code that adds ",5" to the URL.
+    // Appending ",5" to a PlaceID URL invalidates the Place ID and causes Google to NOT open the review box!
     return url;
   };
 
@@ -93,9 +89,7 @@ export default function ReviewPage() {
     setCopiedAndRedirecting(true);
     await copyToClipboard(generatedReview);
 
-    // Get the standard raw https:// link
-    // Google Play Services intercepts 'search.google.com' natively to show the review modal.
-    const targetUrl = getGoogleReviewUrl(client.google_review_link, selectedStar);
+    const targetUrl = getGoogleReviewUrl(client.google_review_link);
 
     setTimeout(() => {
       window.location.href = targetUrl;
