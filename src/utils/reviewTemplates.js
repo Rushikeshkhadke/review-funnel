@@ -1,124 +1,179 @@
-﻿export const reviewTemplates = {
-  'Clothing/Saree': {
-    5: [
-      'Visited [brand_name] in [city] today! Amazing saree collection and fantastic fabric quality. The staff was super helpful.',
-      'Best shopping experience at [brand_name]! Great variety of designer sarees and traditional wear in [city]. Highly recommended!',
-      'Loved the collection at [brand_name]! High quality material, fair pricing, and very friendly staff in [city].',
-      'Extremely satisfied with my purchase from [brand_name]! Beautiful saree designs and very polite staff in [city].',
-      'The best saree showroom in [city]! Huge variety, premium fabrics, and excellent customer service at [brand_name].',
-      'Wonderful saree collection at [brand_name]! Found exactly what I was looking for. Will definitely visit again in [city].'
-    ],
-    4: [
-      'Nice experience at [brand_name]! Good range of saree options and nice atmosphere in [city].',
-      'Really liked the saree designs at [brand_name]. Good quality and polite customer service.',
-      'Good saree collection in [city] at [brand_name]. Fair prices and helpful sales executive.'
-    ],
-    3: [
-      'Decent collection at [brand_name] in [city]. Fair prices and helpful staff.'
-    ]
-  },
-  'Restaurant': {
-    5: [
-      'Delicious food and outstanding service at [brand_name] in [city]! Will definitely come back again with family.',
-      'Must try spot in [city]! [brand_name] serves incredible food with top-notch hygiene and ambiance.',
-      'Had an extraordinary dinner at [brand_name]! Great taste, fast service, and fantastic staff in [city].',
-      'Hands down the best place to eat in [city]! [brand_name] never disappoints with its authentic flavor.',
-      'Amazing food quality and friendly hospitality at [brand_name]. Highly recommend visiting here in [city]!'
-    ],
-    4: [
-      'Great meal at [brand_name]! Fresh ingredients and quick service in [city].',
-      'Enjoyed dining at [brand_name]. Tasty food and good ambiance in [city].',
-      'Good food quality at [brand_name]. Service was prompt and staff was courteous.'
-    ],
-    3: [
-      'Good food at [brand_name] in [city]. Decent portion sizes and service.'
-    ]
-  },
-  'Mobile Shop': {
-    5: [
-      'Bought a new phone from [brand_name] in [city]! Best deals in town and super knowledgeable staff.',
-      'Great service at [brand_name]! They helped me transfer all my data seamlessly. Highly recommend!',
-      'Best mobile shop in [city]! [brand_name] offers genuine products, best discounts, and super helpful staff.',
-      'Fantastic experience buying my new phone at [brand_name] in [city]. Quick service and original accessories!'
-    ],
-    4: [
-      'Very good phone collection and accessories at [brand_name] in [city]. Good prices.',
-      'Prompt service and honest advice at [brand_name]. Satisfied customer!',
-      'Good variety of mobile brands and accessories at [brand_name] in [city].'
-    ],
-    3: [
-      'Decent service at [brand_name] in [city]. Good range of products available.'
-    ]
-  },
-  'Cafe': {
-    5: [
-      'Best coffee spot in [city]! Loved the ambiance and fresh snacks at [brand_name]. Perfect place to chill.',
-      'Amazing coffee and lovely vibe at [brand_name]! Quick service and friendly staff in [city].',
-      'Awesome cozy cafe in [city]! [brand_name] has great food, amazing beverages, and very peaceful music.',
-      'Loved the ambiance and delicious snacks at [brand_name]. The best place to hangout with friends in [city]!'
-    ],
-    4: [
-      'Nice cozy cafe in [city]! Good coffee and peaceful environment at [brand_name].',
-      'Great taste and reasonable pricing at [brand_name]. Would visit again.',
-      'Good hangout spot in [city] at [brand_name]. Friendly staff and quick order processing.'
-    ],
-    3: [
-      'Decent place for a quick coffee in [city] at [brand_name].'
-    ]
-  },
-  'Salon': {
-    5: [
-      'Got a styling at [brand_name] in [city] and it turned out amazing! Super skilled professionals.',
-      'Highly professional service at [brand_name]! Clean, hygienic, and relaxing atmosphere in [city].',
-      'The best salon experience in [city]! [brand_name] staff is extremely courteous and talented.',
-      'Superb haircut and skin care service at [brand_name]! Left feeling completely satisfied and refreshed.'
-    ],
-    4: [
-      'Good grooming service at [brand_name]. Polite staff and good quality products used in [city].',
-      'Satisfied with the service at [brand_name]. Very neat and professional.',
-      'Nice service and friendly behavior by staff at [brand_name] in [city].'
-    ],
-    3: [
-      'Decent salon experience at [brand_name] in [city]. Good basic services.'
-    ]
-  },
-  'Grocery': {
-    5: [
-      'Always fresh stock and clean store at [brand_name] in [city]! Quick checkout and great discount offers.',
-      'Best local grocery store in [city]! [brand_name] has everything you need under one roof.',
-      'Super convenient and well-stocked store! [brand_name] staff in [city] is very polite and helpful.'
-    ],
-    4: [
-      'Well organized store with good pricing at [brand_name] in [city]. Polite staff.',
-      'Good variety of daily essentials at [brand_name]. Easy shopping experience.'
-    ],
-    3: [
-      'Decent grocery store in [city]. Good availability of daily items at [brand_name].'
-    ]
-  },
-  'Other': {
-    5: [
-      'Excellent experience with [brand_name] in [city]! Top quality service and very professional team.',
-      'Highly satisfied with [brand_name]! Friendly staff, great value, and super smooth experience.',
-      'Truly outstanding service at [brand_name] in [city]. Will definitely recommend to everyone!'
-    ],
-    4: [
-      'Very good service at [brand_name] in [city]. Reliable and polite staff.',
-      'Had a pleasant experience with [brand_name]. Would recommend to others.'
-    ],
-    3: [
-      'Satisfactory service at [brand_name] in [city]. Good overall.'
-    ]
+﻿// 50 5-star reviews
+const fiveStarTemplates = [
+  "Absolutely amazing experience at {brand}! The staff is super friendly and the service is top-notch. Best {businessType} in {city} without a doubt.",
+  "I've been to many places in {city}, but {brand} truly stands out. The quality is exceptional!",
+  "Highly recommend {brand}! They exceeded all my expectations. Will definitely be visiting this {businessType} again.",
+  "Such a great vibe and excellent service at {brand}. If you are in {city}, you must check them out.",
+  "Five stars! The team at {brand} really knows how to treat their customers. Truly the best {businessType} experience.",
+  "I am so impressed with {brand}. Everything was perfect from start to finish. Highly recommended in {city}!",
+  "Fantastic {businessType}! {brand} never disappoints. Always a great time when I visit.",
+  "Words can't describe how good {brand} is. You have to experience it yourself. Top tier {businessType} in {city}.",
+  "Incredible service! {brand} has definitely gained a loyal customer today.",
+  "If you're looking for a reliable {businessType} in {city}, {brand} is the place to go. 10/10!",
+  "Loved my visit to {brand}. The atmosphere, the quality, everything was just perfect.",
+  "Best {businessType} experience I've had in a long time. {brand} is doing an amazing job in {city}.",
+  "I highly recommend {brand}. Their attention to detail is unmatched.",
+  "A hidden gem in {city}! {brand} is fantastic and I will be telling all my friends about it.",
+  "Outstanding quality and service at {brand}. Easily my favorite {businessType} now.",
+  "Always a phenomenal experience at {brand}. The staff is incredibly welcoming.",
+  "I can't say enough good things about {brand}. They are the best {businessType} in the area.",
+  "Superb! {brand} completely blew me away. Will be coming back to {city} just for this.",
+  "Excellent {businessType}! {brand} provides consistent and high-quality service every single time.",
+  "The best of the best. {brand} sets the standard for every {businessType} in {city}.",
+  "I absolutely love {brand}! They always go above and beyond.",
+  "Top quality service! {brand} is highly recommended if you're anywhere near {city}.",
+  "What a great experience! {brand} is definitely the top {businessType} I've visited recently.",
+  "Perfect execution and great customer service at {brand}. 5 stars all the way!",
+  "I'm blown away by {brand}. The best {businessType} in {city}, hands down.",
+  "Such a wonderful experience at {brand}. Highly professional and excellent quality.",
+  "I recommend {brand} to everyone I know. Absolutely fantastic {businessType}.",
+  "Great job, {brand}! Your team in {city} is doing phenomenal work.",
+  "10/10 would recommend {brand}. They make everything so easy and enjoyable.",
+  "A brilliant {businessType}. {brand} is my go-to place in {city}.",
+  "Always exceptional. {brand} never drops their standard of excellence.",
+  "Very impressed with {brand}. They truly care about their customers.",
+  "Best decision I made was visiting {brand} today. Top {businessType} in {city}!",
+  "Nothing but perfection at {brand}. I highly advise everyone to visit.",
+  "Super happy with my experience at {brand}. The staff in {city} is awesome.",
+  "They deserve more than 5 stars! {brand} is the absolute best {businessType}.",
+  "A truly wonderful {businessType}. {brand} exceeds expectations every time.",
+  "I'm so glad I found {brand} in {city}. It's my new favorite spot.",
+  "Impeccable service at {brand}. Highly recommend them to anyone.",
+  "Consistently great. {brand} is the most reliable {businessType} around.",
+  "They do a fantastic job at {brand}. I am a very satisfied customer.",
+  "Wow! {brand} really knows how to deliver a premium {businessType} experience.",
+  "Highly satisfied with {brand}. Best place in {city}!",
+  "The quality at {brand} is unmatched. A flawless experience.",
+  "I love the energy and service at {brand}. Highly recommended {businessType}.",
+  "If you haven't been to {brand} in {city}, you are missing out!",
+  "Excellent from top to bottom. {brand} is a phenomenal {businessType}.",
+  "The staff at {brand} is amazing and the service is perfect.",
+  "Highly professional, super friendly, and great quality. Thanks {brand}!",
+  "I will always recommend {brand}. The best {businessType} experience in {city}."
+];
+
+// 50 4-star reviews
+const fourStarTemplates = [
+  "Great experience at {brand}. The service was really good, and I enjoyed my time at this {businessType}.",
+  "Very good {businessType} in {city}. {brand} has excellent quality, just minor room for improvement.",
+  "I liked {brand} a lot. The staff was friendly and the overall experience was solid.",
+  "Good value and nice atmosphere at {brand}. Would visit again when in {city}.",
+  "Solid 4 stars for {brand}. A very reliable {businessType}.",
+  "Really enjoyed my visit to {brand}. One of the better places in {city}.",
+  "Good service overall at {brand}. I was quite satisfied with this {businessType}.",
+  "Nice place! {brand} does a great job, just a bit crowded today.",
+  "Very nice {businessType}. {brand} is definitely worth checking out in {city}.",
+  "I had a pleasant experience at {brand}. Will likely return.",
+  "Good quality and friendly staff at {brand}. Solid 4-star experience.",
+  "I was happy with {brand}. A very good {businessType} overall.",
+  "Great option in {city}. {brand} provides good service consistently.",
+  "Nice to have a good {businessType} like {brand} nearby. Enjoyed it.",
+  "Pretty good experience at {brand}. Met my expectations well.",
+  "I generally really like {brand}. Good quality and nice people.",
+  "Solid choice in {city}. {brand} is a good {businessType}.",
+  "Satisfied with {brand}. Everything was good and well managed.",
+  "Good, reliable service at {brand}. I've had good experiences here.",
+  "I recommend {brand} if you're looking for a good {businessType} in {city}.",
+  "Nice atmosphere and good quality at {brand}.",
+  "A positive experience at {brand}. They do things well.",
+  "Very decent {businessType}. {brand} is doing a good job.",
+  "I enjoyed my time at {brand}. A nice addition to {city}.",
+  "Good work by the team at {brand}. Happy with the service.",
+  "Overall, a great experience at {brand}. Would recommend.",
+  "Pretty solid {businessType}. {brand} rarely disappoints.",
+  "Glad I stopped by {brand}. A very good experience.",
+  "Nice quality and friendly service at {brand} in {city}.",
+  "Good place. {brand} is a reliable {businessType} to visit.",
+  "I had a good time at {brand}. Everything was up to par.",
+  "Very satisfied with {brand}. A strong 4-star performance.",
+  "Good {businessType} option in {city}. {brand} is quite nice.",
+  "I appreciate the service at {brand}. They do a fine job.",
+  "Well managed and good quality at {brand}.",
+  "A nice experience at {brand}. I would visit this {businessType} again.",
+  "Good job {brand}. You guys are doing great in {city}.",
+  "Solid service and nice people at {brand}.",
+  "Overall very good. {brand} is a nice {businessType}.",
+  "I liked {brand}. Good quality and decent pricing.",
+  "Satisfactory experience at {brand} today.",
+  "Good place in {city}. {brand} met my needs well.",
+  "Nice and reliable {businessType}. {brand} is good.",
+  "A pleasant visit to {brand}. Friendly staff and good service.",
+  "I was quite happy with {brand}. A good experience overall.",
+  "Good quality at {brand}. Will be back again.",
+  "Nice to see a good {businessType} like {brand} in {city}.",
+  "A good solid choice. {brand} is very dependable.",
+  "I enjoyed the service at {brand}. Would recommend to others.",
+  "Very good overall experience at {brand}."
+];
+
+// 10 3-star reviews (just in case)
+const threeStarTemplates = [
+  "It was okay. {brand} is an average {businessType}.",
+  "Decent experience at {brand}, but nothing special.",
+  "Average service at {brand} in {city}. Has potential.",
+  "It was fine. {brand} met basic expectations.",
+  "Not bad, but not great either. {brand} is just okay.",
+  "Fair experience at {brand}. Might give it another try.",
+  "Standard {businessType}. {brand} was acceptable.",
+  "Could be better, but overall an okay visit to {brand}.",
+  "Service at {brand} was average today.",
+  "{brand} is a typical {businessType} in {city}. Nothing exceptional."
+];
+
+// Helper to shuffle an array
+const shuffleArray = (array) => {
+  const newArr = [...array];
+  for (let i = newArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
   }
+  return newArr;
 };
 
-export function getRandomReview(businessType, stars, brandName, city) {
-  const category = reviewTemplates[businessType] || reviewTemplates['Other'];
-  const starReviews = category[stars] || category[5];
-  const randomIndex = Math.floor(Math.random() * starReviews.length);
-  let template = starReviews[randomIndex];
+// Main function to get a non-repeating random review
+export const getRandomReview = (businessType, rating, brandName, city) => {
+  const brand = brandName || 'this place';
+  const location = city || 'the area';
+  const type = businessType ? businessType.toLowerCase() : 'business';
 
-  return template
-    .replace(/\[brand_name\]/g, brandName || 'this store')
-    .replace(/\[city\]/g, city || 'our area');
-}
+  let templates = [];
+  if (rating === 5) templates = fiveStarTemplates;
+  else if (rating === 4) templates = fourStarTemplates;
+  else templates = threeStarTemplates;
+
+  if (templates.length === 0) return "Great experience!";
+
+  // Storage key specific to this rating
+  const storageKey = `review_cycle_${rating}`;
+  
+  // Get current cycle from localStorage
+  let cycle = [];
+  try {
+    const stored = localStorage.getItem(storageKey);
+    if (stored) cycle = JSON.parse(stored);
+  } catch (e) {
+    console.error("Local storage error", e);
+  }
+
+  // If cycle is empty or invalid, refill and shuffle it with indices 0 to length-1
+  if (!Array.isArray(cycle) || cycle.length === 0) {
+    cycle = Array.from({ length: templates.length }, (_, i) => i);
+    cycle = shuffleArray(cycle);
+  }
+
+  // Pop the last index to use it
+  const selectedIndex = cycle.pop();
+
+  // Save the remaining cycle back to localStorage
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(cycle));
+  } catch (e) {}
+
+  // Get the template and replace variables
+  let text = templates[selectedIndex];
+  text = text.replace(/{brand}/g, brand);
+  text = text.replace(/{businessType}/g, type);
+  text = text.replace(/{city}/g, location);
+
+  return text;
+};
