@@ -51,7 +51,6 @@ export default function ReviewPage() {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(text);
       } else {
-        // Fallback for older browsers or non-secure contexts
         const textArea = document.createElement('textarea');
         textArea.value = text;
         textArea.style.position = 'fixed';
@@ -85,22 +84,6 @@ export default function ReviewPage() {
     return url;
   };
 
-  const buildSmartTargetUrl = (baseUrl, rating) => {
-    let targetUrl = getGoogleReviewUrl(baseUrl, rating);
-    const isAndroid = /android/i.test(navigator.userAgent || navigator.vendor || window.opera);
-    
-    if (isAndroid) {
-      try {
-        const urlObj = new URL(targetUrl);
-        // Build Android Intent to force-open Google Maps App directly
-        targetUrl = `intent://${urlObj.host}${urlObj.pathname}${urlObj.search}${urlObj.hash}#Intent;package=com.google.android.apps.maps;scheme=https;end;`;
-      } catch (e) {
-        console.error('Invalid URL for Intent generation', e);
-      }
-    }
-    return targetUrl;
-  };
-
   const handleCopyAndPost = async () => {
     if (!client || !client.google_review_link) {
       alert("Google Review link is missing for this client!");
@@ -110,13 +93,12 @@ export default function ReviewPage() {
     setCopiedAndRedirecting(true);
     await copyToClipboard(generatedReview);
 
-    const targetUrl = buildSmartTargetUrl(client.google_review_link, selectedStar);
+    // Get the standard raw https:// link
+    // Google Play Services intercepts 'search.google.com' natively to show the review modal.
+    const targetUrl = getGoogleReviewUrl(client.google_review_link, selectedStar);
 
-    // Added 600ms delay to ensure copy is processed by the OS before app switch
     setTimeout(() => {
       window.location.href = targetUrl;
-      
-      // Fallback reset UI state just in case they return to browser
       setTimeout(() => setCopiedAndRedirecting(false), 2000);
     }, 600);
   };
