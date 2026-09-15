@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import { supabase } from '../utils/supabase';
-import ColorThief from 'color-thief-browser';
+import Vibrant from 'node-vibrant';
 import { X } from 'lucide-react';
 
 export default function ClientForm({ onClose, onComplete, initialData }) {
@@ -25,27 +25,24 @@ export default function ClientForm({ onClose, onComplete, initialData }) {
         if (uploadError) throw uploadError;
 
         const { data: { publicUrl } } = supabase.storage.from('logos').getPublicUrl(fileName);
+        updatedData.logo_url = publicUrl;
 
-        await new Promise((resolve) => {
-          const img = new Image();
-          img.crossOrigin = 'Anonymous';
-          img.src = URL.createObjectURL(file);
-          img.onload = () => {
-            const colorThief = new ColorThief();
-            try {
-              const palette = colorThief.getPalette(img, 2);
-              const toHex = (rgb) => '#' + rgb.map(x => x.toString(16).padStart(2, '0')).join('');
-              if (palette && palette[0]) updatedData.primary_color = toHex(palette[0]);
-              if (palette && palette[1]) updatedData.secondary_color = toHex(palette[1]);
-            } catch (e) {
-              console.log('Color extraction fallback', e);
-              updatedData.primary_color = '#6b21a8';
-              updatedData.secondary_color = '#3b82f6';
-            }
-            updatedData.logo_url = publicUrl;
-            resolve();
-          };
-        });
+        // Better color extraction using node-vibrant
+        try {
+          const objectUrl = URL.createObjectURL(file);
+          const palette = await Vibrant.from(objectUrl).getPalette();
+          
+          if (palette) {
+            // Prefer Vibrant for primary, fallback to DarkVibrant or Muted
+            updatedData.primary_color = palette.Vibrant?.hex || palette.DarkVibrant?.hex || palette.Muted?.hex || '#8b5cf6';
+            // Prefer LightVibrant for secondary, fallback to LightMuted
+            updatedData.secondary_color = palette.LightVibrant?.hex || palette.LightMuted?.hex || '#ec4899';
+          }
+        } catch (colorError) {
+          console.error('Vibrant color extraction failed', colorError);
+          updatedData.primary_color = '#6b21a8';
+          updatedData.secondary_color = '#3b82f6';
+        }
       }
 
       if (initialData) {
