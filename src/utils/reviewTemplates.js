@@ -1,5 +1,4 @@
-﻿// Dynamic Review Combinator logic - STRICT SEO OPTIMIZED
-// Every combination guarantees: Intro (Emotion) + Body (Brand & Business Type) + Outro (City)
+﻿// Dynamic Review Combinator logic - STRICT SEO OPTIMIZED & STRICT NON-REPEATING
 
 const intros5 = [
   "Absolutely amazing experience!",
@@ -155,7 +154,7 @@ const outros4 = [
   "Glad I went to this place in {city}."
 ];
 
-// 3-star templates (kept simple)
+// 3-star templates
 const threeStarTemplates = [
   "It was okay. {brand} is an average {businessType} in {city}.",
   "Decent experience at {brand}, but nothing special for {city}.",
@@ -164,8 +163,36 @@ const threeStarTemplates = [
   "Not bad, but not great either. {brand} is just okay in {city}."
 ];
 
-// Helper to get random item from array
-const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const shuffleArray = (array) => {
+  const newArr = [...array];
+  for (let i = newArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+  }
+  return newArr;
+};
+
+// Gets a non-repeating item using a shuffled bag in localStorage
+const getNonRepeatingRandom = (arr, storageKey) => {
+  let cycle = [];
+  try {
+    const stored = localStorage.getItem(storageKey);
+    if (stored) cycle = JSON.parse(stored);
+  } catch (e) {}
+
+  if (!Array.isArray(cycle) || cycle.length === 0) {
+    cycle = Array.from({ length: arr.length }, (_, i) => i);
+    cycle = shuffleArray(cycle);
+  }
+
+  const selectedIndex = cycle.pop();
+
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(cycle));
+  } catch (e) {}
+
+  return arr[selectedIndex];
+};
 
 export const getRandomReview = (businessType, rating, brandName, city) => {
   const brand = brandName || 'this place';
@@ -175,17 +202,17 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
   let text = "";
 
   if (rating === 5) {
-    const intro = getRandom(intros5);
-    const body = getRandom(bodies5);
-    const outro = getRandom(outros5);
+    const intro = getNonRepeatingRandom(intros5, 'review_cycle_5_intros');
+    const body = getNonRepeatingRandom(bodies5, 'review_cycle_5_bodies');
+    const outro = getNonRepeatingRandom(outros5, 'review_cycle_5_outros');
     text = `${intro} ${body} ${outro}`;
   } else if (rating === 4) {
-    const intro = getRandom(intros4);
-    const body = getRandom(bodies4);
-    const outro = getRandom(outros4);
+    const intro = getNonRepeatingRandom(intros4, 'review_cycle_4_intros');
+    const body = getNonRepeatingRandom(bodies4, 'review_cycle_4_bodies');
+    const outro = getNonRepeatingRandom(outros4, 'review_cycle_4_outros');
     text = `${intro} ${body} ${outro}`;
   } else {
-    text = getRandom(threeStarTemplates);
+    text = getNonRepeatingRandom(threeStarTemplates, 'review_cycle_3_all');
   }
 
   // Replace variables globally
