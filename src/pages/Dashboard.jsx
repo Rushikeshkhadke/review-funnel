@@ -1,5 +1,5 @@
-﻿import React, { useState, useEffect } from 'react';
-import { Plus, Download, ExternalLink, Copy, Check, Trash2, Edit, RefreshCw, BarChart2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Plus, Download, ExternalLink, Copy, Check, Trash2, Edit, RefreshCw, BarChart2, RotateCcw } from 'lucide-react';
 import { supabase } from '../utils/supabase';
 import ClientForm from '../components/ClientForm';
 import { QRCodeSVG } from 'qrcode.react';
@@ -32,6 +32,18 @@ export default function Dashboard() {
       fetchClients();
     } catch (err) {
       alert('Failed to delete client: ' + err.message);
+    }
+  };
+
+  const handleResetScans = async (id, brandName) => {
+    if (!window.confirm(`Are you sure you want to reset the scan count for "${brandName}" to 0?`)) return;
+
+    try {
+      const { error } = await supabase.from('clients').update({ scans: 0 }).eq('id', id);
+      if (error) throw error;
+      fetchClients();
+    } catch (err) {
+      alert('Failed to reset scans: ' + err.message);
     }
   };
 
@@ -149,7 +161,12 @@ export default function Dashboard() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between px-3 py-2 bg-white/5 rounded-xl border border-white/5">
                        <span className="text-xs text-gray-400 flex items-center gap-1.5"><BarChart2 size={14}/> Total Scans</span>
-                       <span className="text-sm font-bold text-white">{client.scans || 0}</span>
+                       <div className="flex items-center gap-2">
+                         <span className="text-sm font-bold text-white">{client.scans || 0}</span>
+                         <button onClick={() => handleResetScans(client.id, client.brand_name)} title="Reset Scans to 0" className="text-gray-500 hover:text-red-400 transition-colors p-1 rounded-md hover:bg-white/10">
+                           <RotateCcw size={12} />
+                         </button>
+                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-2">
