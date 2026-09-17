@@ -4,7 +4,6 @@ import { supabase } from '../utils/supabase';
 import { getRandomReview } from '../utils/reviewTemplates';
 import { Star, RefreshCw, Copy, Check, ExternalLink } from 'lucide-react';
 
-// Helper to determine text color (black/white) based on background brightness
 const getContrastColor = (hexcolor) => {
   if (!hexcolor) return '#ffffff';
   const hex = hexcolor.replace("#", "");
@@ -13,7 +12,7 @@ const getContrastColor = (hexcolor) => {
   const g = parseInt(hex.substr(2,2), 16);
   const b = parseInt(hex.substr(4,2), 16);
   const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-  return (yiq >= 128) ? '#111827' : '#ffffff'; // Dark gray for light bg, White for dark bg
+  return (yiq >= 128) ? '#111827' : '#ffffff';
 };
 
 export default function ReviewPage() {
@@ -131,8 +130,6 @@ export default function ReviewPage() {
   }
 
   const primaryColor = client.primary_color || '#8b5cf6';
-  
-  // Calculate text color dynamically to ensure readability
   const btnTextColor = getContrastColor(primaryColor);
   const activeStarTextColor = getContrastColor(primaryColor);
 
@@ -140,95 +137,130 @@ export default function ReviewPage() {
     <div 
       className="min-h-screen flex flex-col items-center justify-between p-4 sm:p-6 text-white relative overflow-hidden font-sans"
       style={{
-        background: `radial-gradient(circle at top, ${primaryColor}15 0%, #050505 100%)`,
+        background: `radial-gradient(120% 100% at 50% 0%, ${primaryColor}40 0%, #050505 85%)`,
         backgroundColor: '#050505'
       }}
     >
+      {/* Intense Background Glow */}
       <div 
-        className="absolute top-[-10%] left-[50%] translate-x-[-50%] w-[500px] h-[500px] rounded-full blur-[140px] pointer-events-none opacity-40 transition-colors duration-700"
+        className="absolute top-[-20%] left-[50%] translate-x-[-50%] w-[600px] h-[600px] rounded-full blur-[150px] pointer-events-none opacity-50"
+        style={{ backgroundColor: primaryColor }}
+      />
+      <div 
+        className="absolute bottom-[-20%] left-[-20%] w-[400px] h-[400px] rounded-full blur-[120px] pointer-events-none opacity-20"
         style={{ backgroundColor: primaryColor }}
       />
 
       <main className="w-full max-w-md mx-auto relative z-10 flex-1 flex flex-col items-center justify-center py-8">
         <div className="text-center mb-10 flex flex-col items-center animate-fade-in-up">
           {client.logo_url && (
-            <div className="w-24 h-24 mb-5 rounded-2xl p-3 bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center justify-center">
-              <img src={client.logo_url} alt={client.brand_name} className="max-h-full max-w-full object-contain" />
+            <div 
+              className="w-28 h-28 mb-5 rounded-3xl p-3 backdrop-blur-2xl flex items-center justify-center"
+              style={{
+                backgroundColor: `${primaryColor}15`,
+                border: `1px solid ${primaryColor}40`,
+                boxShadow: `0 25px 50px -12px ${primaryColor}40, inset 0 0 20px ${primaryColor}20`
+              }}
+            >
+              <img src={client.logo_url} alt={client.brand_name} className="max-h-full max-w-full object-contain drop-shadow-xl" />
             </div>
           )}
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-2 leading-tight">{client.brand_name}</h1>
-          <p className="text-sm text-gray-400 font-medium tracking-wide uppercase text-[11px]">{client.city ? `${client.city} • ` : ''}{client.business_type}</p>
+          <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-white mb-2 leading-tight drop-shadow-md">
+            {client.brand_name}
+          </h1>
+          <p 
+            className="text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full"
+            style={{ backgroundColor: `${primaryColor}20`, color: `${primaryColor}ff` }}
+          >
+            {client.city ? `${client.city} • ` : ''}{client.business_type}
+          </p>
         </div>
 
-        <div className="w-full bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-7 shadow-2xl text-center mb-6 animate-fade-in-up transition-all">
-          <h2 className="text-lg font-semibold text-gray-200 mb-6">How was your experience?</h2>
+        <div 
+          className="w-full backdrop-blur-xl rounded-3xl p-7 text-center mb-6 animate-fade-in-up transition-all"
+          style={{
+            backgroundColor: `${primaryColor}10`,
+            border: `1px solid ${primaryColor}30`,
+            boxShadow: `0 20px 40px -10px ${primaryColor}30`
+          }}
+        >
+          <h2 className="text-lg font-bold text-white mb-6 drop-shadow-sm">How was your experience?</h2>
 
-          <div className="flex justify-center gap-3 mb-8">
+          <div className="flex justify-center gap-4 mb-8">
             {[3, 4, 5].map((stars) => {
               const active = selectedStar === stars;
               return (
                 <button
                   key={stars}
                   onClick={() => handleStarSelect(stars)}
-                  className={`flex items-center gap-1.5 px-4 py-3 rounded-2xl font-bold transition-all transform active:scale-95 ${
-                    active 
-                      ? 'scale-105 shadow-lg' 
-                      : 'bg-white/5 hover:bg-white/10 text-gray-300 border border-white/5'
+                  className={`flex items-center gap-1.5 px-5 py-3.5 rounded-2xl font-black transition-all transform active:scale-95 ${
+                    active ? 'scale-105' : 'hover:scale-105'
                   }`}
                   style={{
-                    backgroundColor: active ? primaryColor : undefined,
-                    color: active ? activeStarTextColor : undefined,
-                    boxShadow: active ? `0 0 20px ${primaryColor}66` : undefined
+                    backgroundColor: active ? primaryColor : `${primaryColor}15`,
+                    color: active ? activeStarTextColor : '#ffffff',
+                    border: `1px solid ${active ? primaryColor : `${primaryColor}40`}`,
+                    boxShadow: active ? `0 0 25px ${primaryColor}80` : 'none'
                   }}
                 >
                   <span className="text-xl">{stars}</span>
-                  <Star size={18} fill={active ? activeStarTextColor : 'none'} className={active ? '' : 'text-amber-400'} />
+                  <Star size={20} fill={active ? activeStarTextColor : 'none'} className={active ? '' : 'text-amber-400'} />
                 </button>
               );
             })}
           </div>
 
           <div className="space-y-4">
-            <div className="bg-black/40 border border-white/10 rounded-2xl p-4 text-left relative group min-h-[100px] flex items-center">
-              <p className="text-gray-200 text-sm leading-relaxed pr-8 font-normal italic w-full">"{generatedReview}"</p>
+            <div 
+              className="rounded-2xl p-5 text-left relative group min-h-[110px] flex items-center"
+              style={{
+                backgroundColor: `#00000060`,
+                border: `1px solid ${primaryColor}20`,
+                borderLeft: `4px solid ${primaryColor}`
+              }}
+            >
+              <p className="text-gray-100 text-sm leading-relaxed pr-8 font-medium italic w-full">"{generatedReview}"</p>
               <button 
                 onClick={() => generateReview()} 
                 title="Generate New Review"
-                className="absolute top-3 right-3 text-gray-400 hover:text-white transition-colors p-1.5 rounded-lg bg-white/5 hover:bg-white/10 active:scale-90"
+                className="absolute top-3 right-3 transition-colors p-2 rounded-xl active:scale-90"
+                style={{ backgroundColor: `${primaryColor}20`, color: '#ffffff' }}
               >
-                <RefreshCw size={14} />
+                <RefreshCw size={16} />
               </button>
             </div>
 
             <button
               onClick={handleCopyAndPost}
               disabled={copiedAndRedirecting}
-              className={`w-full flex items-center justify-center gap-2 py-4 px-5 rounded-2xl text-sm font-bold transition-all shadow-xl hover:opacity-90 active:scale-95 cursor-pointer ${copiedAndRedirecting ? 'opacity-90 scale-95' : ''}`}
+              className={`w-full flex items-center justify-center gap-2 py-4 px-5 rounded-2xl text-[15px] font-black transition-all hover:opacity-90 active:scale-95 cursor-pointer ${copiedAndRedirecting ? 'opacity-90 scale-95' : ''}`}
               style={{
                 backgroundColor: primaryColor,
                 color: btnTextColor,
-                boxShadow: `0 0 25px ${primaryColor}50`
+                boxShadow: `0 10px 30px ${primaryColor}60`
               }}
             >
               {copiedAndRedirecting ? (
                 <>
-                  <Check size={18} />
+                  <Check size={20} className="animate-bounce" />
                   <span>Copied! Opening Google...</span>
                 </>
               ) : (
                 <>
-                  <Copy size={18} />
+                  <Copy size={20} />
                   <span>Copy Review & Post on Google</span>
-                  <ExternalLink size={18} />
+                  <ExternalLink size={20} />
                 </>
               )}
             </button>
-            <p className="text-[11px] text-gray-500 mt-3 font-medium">Text will copy automatically. Just paste it in Google Maps!</p>
+            <p className="text-xs mt-4 font-semibold opacity-70" style={{ color: '#ffffff' }}>
+              Text will copy automatically. Just paste it in Google Maps!
+            </p>
           </div>
         </div>
       </main>
 
-      <footer className="py-4 text-center text-[10px] text-gray-600 font-medium tracking-widest uppercase z-10">
+      <footer className="py-6 text-center text-[10px] font-bold tracking-[0.2em] uppercase z-10" style={{ color: `${primaryColor}80` }}>
         Powered by Marketing Motion
       </footer>
     </div>
