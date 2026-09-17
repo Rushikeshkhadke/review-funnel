@@ -4,6 +4,18 @@ import { supabase } from '../utils/supabase';
 import { getRandomReview } from '../utils/reviewTemplates';
 import { Star, RefreshCw, Copy, Check, ExternalLink } from 'lucide-react';
 
+// Helper to determine text color (black/white) based on background brightness
+const getContrastColor = (hexcolor) => {
+  if (!hexcolor) return '#ffffff';
+  const hex = hexcolor.replace("#", "");
+  if (hex.length !== 6) return '#ffffff';
+  const r = parseInt(hex.substr(0,2), 16);
+  const g = parseInt(hex.substr(2,2), 16);
+  const b = parseInt(hex.substr(4,2), 16);
+  const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+  return (yiq >= 128) ? '#111827' : '#ffffff'; // Dark gray for light bg, White for dark bg
+};
+
 export default function ReviewPage() {
   const { clientId } = useParams();
   const [client, setClient] = useState(null);
@@ -19,7 +31,6 @@ export default function ReviewPage() {
   }, [clientId]);
 
   const logScan = async () => {
-    // We increment the scan count in the background via a database function
     try {
       await supabase.rpc('increment_scan', { c_id: clientId });
     } catch (e) {
@@ -120,7 +131,10 @@ export default function ReviewPage() {
   }
 
   const primaryColor = client.primary_color || '#8b5cf6';
-  const secondaryColor = client.secondary_color || '#ec4899';
+  
+  // Calculate text color dynamically to ensure readability
+  const btnTextColor = getContrastColor(primaryColor);
+  const activeStarTextColor = getContrastColor(primaryColor);
 
   return (
     <div 
@@ -158,16 +172,17 @@ export default function ReviewPage() {
                   onClick={() => handleStarSelect(stars)}
                   className={`flex items-center gap-1.5 px-4 py-3 rounded-2xl font-bold transition-all transform active:scale-95 ${
                     active 
-                      ? 'scale-105 shadow-lg text-white' 
+                      ? 'scale-105 shadow-lg' 
                       : 'bg-white/5 hover:bg-white/10 text-gray-300 border border-white/5'
                   }`}
                   style={{
                     backgroundColor: active ? primaryColor : undefined,
+                    color: active ? activeStarTextColor : undefined,
                     boxShadow: active ? `0 0 20px ${primaryColor}66` : undefined
                   }}
                 >
                   <span className="text-xl">{stars}</span>
-                  <Star size={18} fill={active ? '#fff' : 'none'} className={active ? 'text-white' : 'text-amber-400'} />
+                  <Star size={18} fill={active ? activeStarTextColor : 'none'} className={active ? '' : 'text-amber-400'} />
                 </button>
               );
             })}
@@ -188,15 +203,16 @@ export default function ReviewPage() {
             <button
               onClick={handleCopyAndPost}
               disabled={copiedAndRedirecting}
-              className={`w-full flex items-center justify-center gap-2 py-4 px-5 rounded-2xl text-sm font-bold text-white transition-all shadow-xl hover:opacity-90 active:scale-95 cursor-pointer ${copiedAndRedirecting ? 'opacity-90 scale-95' : ''}`}
+              className={`w-full flex items-center justify-center gap-2 py-4 px-5 rounded-2xl text-sm font-bold transition-all shadow-xl hover:opacity-90 active:scale-95 cursor-pointer ${copiedAndRedirecting ? 'opacity-90 scale-95' : ''}`}
               style={{
-                backgroundColor: secondaryColor || primaryColor,
-                boxShadow: `0 0 25px ${(secondaryColor || primaryColor)}40`
+                backgroundColor: primaryColor,
+                color: btnTextColor,
+                boxShadow: `0 0 25px ${primaryColor}50`
               }}
             >
               {copiedAndRedirecting ? (
                 <>
-                  <Check size={18} className="text-white animate-bounce" />
+                  <Check size={18} />
                   <span>Copied! Opening Google...</span>
                 </>
               ) : (
