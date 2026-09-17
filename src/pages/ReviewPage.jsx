@@ -1,7 +1,8 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../utils/supabase';
 import { getRandomReview } from '../utils/reviewTemplates';
+import { agencyLogo } from '../utils/agencyLogo';
 import { Star, RefreshCw, Copy, Check, ExternalLink } from 'lucide-react';
 
 const getContrastColor = (hexcolor) => {
@@ -260,8 +261,9 @@ export default function ReviewPage() {
         </div>
       </main>
 
-      <footer className="py-6 text-center text-[10px] font-bold tracking-[0.2em] uppercase z-10" style={{ color: `${primaryColor}80` }}>
-        Powered by Marketing Motion
+      <footer className="py-6 flex flex-col items-center justify-center gap-2 text-center text-[10px] font-bold tracking-[0.2em] uppercase z-10" style={{ color: `${primaryColor}80` }}>
+        <img src={agencyLogo} alt="Marketing Motion Logo" className="h-7 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+        <span>Powered by Marketing Motion</span>
       </footer>
     </div>
   );
