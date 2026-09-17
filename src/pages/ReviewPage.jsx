@@ -261,8 +261,8 @@ export default function ReviewPage() {
         </div>
       </main>
 
-      <footer className="py-6 flex flex-col items-center justify-center gap-2 text-center text-[10px] font-bold tracking-[0.2em] uppercase z-10" style={{ color: `${primaryColor}80` }}>
-        <img src={agencyLogo} alt="Marketing Motion Logo" className="h-14 object-contain opacity-100 drop-shadow-md" />
+      <footer className="py-8 flex flex-col items-center justify-center gap-3 text-center text-[11px] sm:text-xs font-bold tracking-[0.15em] uppercase z-10" style={{ color: `${primaryColor}a0` }}>
+        <img src={agencyLogo} alt="Marketing Motion Logo" className="h-24 object-contain opacity-100 drop-shadow-lg" />
         <span>Powered by Marketing Motion</span>
       </footer>
     </div>
