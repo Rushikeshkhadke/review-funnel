@@ -37,15 +37,15 @@ const intros5_ca = [
 
 const intros5_mobile = [
   "Hands down the best mobile store around!",
-  "Super fast service and genuine products!",
+  "Super fast service and 100% genuine products!",
   "Got the best deal on my new phone!",
-  "Extremely happy with my purchase!",
+  "Extremely happy with my shopping experience!",
   "Top-notch service and honest guidance!",
-  "Fastest mobile repair experience ever!",
-  "Unbeatable prices and great customer service!",
-  "Best mobile buying experience!",
-  "Highly satisfied with their repair quality!",
-  "Awesome collection of latest smartphones!"
+  "Best place for Apple phones and Samsung flagships!",
+  "Unbeatable collection of accessories and perfumes!",
+  "Best mobile buying experience ever!",
+  "Highly satisfied with their customer service!",
+  "Awesome collection of latest iPhones and premium phones!"
 ];
 
 // BODIES (5-Star)
@@ -80,18 +80,37 @@ const bodies5_ca = [
 ];
 
 const bodies5_mobile = [
-  "Purchased my new smartphone from {brand} at the best price in market with great exchange offer and instant EMI finance.",
-  "Hands down the best mobile shop! Got original back cover, tempered glass, and fast charger for my phone at {brand}.",
-  "Got my phone display repaired at {brand}. They replaced it with a genuine original screen within an hour!",
-  "{brand} has the best collection of latest smartphones and genuine mobile accessories with official company warranty.",
-  "Great experience buying a new phone from {brand}. The staff helped me transfer all data from my old device smoothly.",
-  "Highly genuine mobile store! Got a great discount on my purchase and quick Bajaj finance approval at {brand}.",
-  "Best place for mobile repair and buying new phones. {brand} offers very honest advice and reasonable rates.",
-  "I always buy all my phones and gadgets from {brand} because they sell 100% authentic products with brand warranty.",
-  "Extremely satisfied with the service at {brand}. Replaced my smartphone battery and fixed the charging port quickly.",
-  "{brand} offers awesome deals on latest mobile phones with zero-downpayment monthly installment options.",
-  "Got my cracked screen fixed at {brand}. Touch response is working perfectly like a brand new phone!",
-  "The staff at {brand} guided me patiently to choose the best phone within my budget."
+  // Rohit mentions
+  "Purchased my new Apple iPhone from {brand}. Rohit bhai guided me patiently and gave me an amazing deal with original accessories!",
+  "Best shop for Apple lovers! Rohit at {brand} was super helpful in recommending the right iPhone cover and tempered glass from their huge variety.",
+  "Rohit at {brand} gave me the best price for my Samsung Ultra flagship phone. Very polite and knowledgeable owner!",
+  "I went to {brand} to buy a new phone and Rohit helped me choose between Samsung premium segment and iPhone. Highly honest service!",
+  "Rohit suggested a great premium branded perfume along with my new iPhone purchase at {brand}. Really loved the experience!",
+  
+  // Monish mentions
+  "Bought the latest Samsung Galaxy flagship from {brand}. Monish bhai gave me a great discount and genuine brand warranty!",
+  "Monish at {brand} showed me an unbelievable variety of Apple iPhone covers and premium accessories. Top quality store!",
+  "Monish bhai is extremely polite and customer-focused. He helped me pick an awesome Apple phone and a premium branded perfume at {brand}.",
+  "If you want authentic Apple products or Samsung premium phones, go straight to {brand} and meet Monish!",
+  "Monish made my phone buying experience so smooth at {brand}. He even set up my new iPhone and data transfer in minutes.",
+
+  // Rohit & Monish combined
+  "Rohit and Monish at {brand} are running the best mobile shop! Got an amazing deal on my new iPhone along with a fantastic branded perfume.",
+  "Special thanks to Rohit bhai and Monish bhai at {brand} for giving me the best deal on Samsung premium segment phone and custom Apple covers.",
+
+  // Staff mentions
+  "The staff at {brand} is super courteous and well-trained. They showed me a huge collection of iPhone covers and fast chargers patiently.",
+  "Great customer service by the team at {brand}! They helped me select a premium Samsung phone and a lovely branded perfume.",
+  "The staff at {brand} made sure I got 100% genuine accessories for my Apple phone with official brand warranty.",
+
+  // Product focused (Without owner/staff name)
+  "Purchased my new Apple iPhone from {brand}. They have an incredible variety of iPhone covers, chargers, and even premium branded perfumes!",
+  "{brand} has the best collection of Samsung premium segment phones and Apple devices in the market.",
+  "If you own an iPhone, {brand} is a paradise! They have all varieties of Apple covers, screen guards, and premium accessories.",
+  "Got my new Apple phone from {brand} along with an awesome branded perfume. Everything is 100% authentic with official warranty.",
+  "Best mobile store! {brand} offers top-quality accessories, genuine Apple products, and Samsung flagships at competitive rates.",
+  "Surprised to find an amazing collection of premium branded perfumes alongside latest Apple and Samsung phones at {brand}!",
+  "Found the perfect cover for my iPhone at {brand}. They have the largest variety of Apple accessories in the city."
 ];
 
 const bodies5_clothing = [
@@ -152,10 +171,10 @@ const outros5_ca = [
 
 const outros5_mobile = [
   "Easily the best mobile shop in {city}!",
-  "If you want to buy a phone or need mobile repair in {city}, go straight to them!",
+  "If you want an iPhone, Samsung flagship, or premium perfume in {city}, go straight to them!",
   "Highly recommended mobile store for all {city} locals.",
-  "Best prices and deals on mobile phones in all of {city}.",
-  "Will definitely buy my next smartphone from them in {city}!",
+  "Best prices and deals on Apple phones and accessories in all of {city}.",
+  "Will definitely buy my next phone and perfumes from them in {city}!",
   "The most trusted mobile store in {city}."
 ];
 
@@ -192,11 +211,11 @@ const bodies4_ca = [
 ];
 
 const bodies4_mobile = [
-  "Bought a new smartphone from {brand}. Good pricing, authentic product, and helpful staff.",
-  "Got my mobile display replaced at {brand}. Fast repair service and working well.",
-  "Decent collection of smartphones and mobile accessories at {brand}.",
-  "Smooth mobile purchase experience at {brand} with easy EMI option.",
-  "{brand} offers good deals on mobile phones and quick repair service."
+  "Bought an iPhone cover and fast charger from {brand}. Rohit and the staff were polite and gave good suggestions.",
+  "Good collection of Samsung premium segment phones and Apple accessories at {brand}. Monish was helpful.",
+  "Got my new Apple phone and a nice branded perfume at {brand}. Decent experience overall.",
+  "{brand} has a really good variety of Apple phone covers and accessories in {city}.",
+  "Friendly team at {brand}. Good deals on Samsung flagships and Apple devices."
 ];
 
 const outros4_generic = [
@@ -215,7 +234,7 @@ const outros4_ca = [
 
 const outros4_mobile = [
   "One of the better mobile shops in {city}.",
-  "Recommended for buying phones or accessories in {city}.",
+  "Recommended for buying iPhones, accessories, or perfumes in {city}.",
   "Good mobile store for all {city} residents."
 ];
 
@@ -319,7 +338,7 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
 
   let text = "";
   if (rating === 5 || rating === 4) {
-    const keyPrefix = `review_cycle_${rating}_${cat}`;
+    const keyPrefix = `review_cycle_${rating}__${cat}`;
     const intro = getNonRepeatingRandom(introsPool, `${keyPrefix}_intros`);
     const body = getNonRepeatingRandom(bodiesPool, `${keyPrefix}_bodies`);
     const outro = getNonRepeatingRandom(outrosPool, `${keyPrefix}_outros`);
