@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { supabase } from '../utils/supabase';
 import { Vibrant } from 'node-vibrant/browser';
 import { X, Palette } from 'lucide-react';
@@ -105,6 +105,7 @@ export default function ClientForm({ onClose, onComplete, initialData }) {
                 <option>Clothing/Saree</option>
                 <option>Mobile Shop</option>
                 <option>Grocery</option>
+                <option>Chartered Accountant (CA)</option>
                 <option>Other</option>
               </select>
             </div>
