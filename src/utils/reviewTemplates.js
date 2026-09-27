@@ -49,16 +49,16 @@ const intros5_mobile = [
 ];
 
 const intros5_hotel = [
-  "Best place to stay on the route!",
-  "Extremely comfortable stay and delicious food!",
-  "Wonderful mountain hospitality!",
-  "Clean rooms and awesome hot food!",
-  "Highly recommended for families and pilgrims!",
-  "Had a very cozy and peaceful stay!",
-  "Top-class service on the travel route!",
-  "Very polite staff and great location!",
-  "Awesome stay experience!",
-  "Perfect halt spot with great views!"
+  "Best spot if you are coming to Kedarnath!",
+  "Awesome location and super peaceful environment!",
+  "Highly recommended halt spot for Kedarnath Yatra!",
+  "Best value for money stay and food on Kedarnath route!",
+  "Super peaceful environment and great location!",
+  "Must-visit spot on your way to Kedarnath!",
+  "Great experience and pocket-friendly prices!",
+  "Wonderful atmosphere and perfect location!",
+  "Top-class hospitality on Kedarnath road!",
+  "Amazing place to rest, eat, and refresh!"
 ];
 
 // BODIES (5-Star)
@@ -118,16 +118,18 @@ const bodies5_mobile = [
 ];
 
 const bodies5_hotel = [
-  "Stayed at {brand} during our trip to {city}. The rooms were super clean, 24/7 hot water was available, and the food was freshly prepared and delicious!",
-  "{brand} is a great halt option in {city}. Clean beddings, neat washrooms, and very supportive staff. The owner guided us well about the travel route.",
-  "The food at {brand} was super fresh and felt like home. Excellent place to rest, refresh, and eat while traveling through {city}.",
-  "Great experience at {brand}! Spacious rooms, peaceful mountain view, safe vehicle parking, and continuous hot water facility.",
-  "We stopped at {brand} for hot food and room stay. The thali was piping hot and delicious, and the staff treated us with extreme warmth.",
-  "If you are traveling through {city}, {brand} is the best place for stay and dining. Very reasonable rates and top-notch hygiene.",
-  "{brand} provided awesome service. Clean room, comfortable bed, fast room service, and piping hot North Indian food.",
-  "Super clean rooms, continuous hot water supply, and delicious thali at {brand}. Will definitely visit again whenever we travel to {city}.",
-  "Stayed here with family during our yatra. The team at {brand} was very humble and helpful with local travel information. Very safe environment.",
-  "The thali and piping hot tea at {brand} was so refreshing after a long journey in {city}. Rooms are well-maintained, warm, and cozy."
+  "If you are coming to Kedarnath, {brand} is a must-visit spot on the way! Beautiful environment, very peaceful location, and extremely reasonable prices.",
+  "{brand} has an awesome environment and great scenic location right on the Kedarnath route. Highly recommended if you are traveling for Kedarnath Yatra!",
+  "Stopped at {brand} while heading to Kedarnath. The location is super convenient, pricing is budget-friendly, and the atmosphere is so relaxing.",
+  "Awesome environment, clean rooms, and very pocket-friendly prices at {brand}. If you are coming towards Kedarnath, definitely visit this place!",
+  "One of the best spots to stay and refresh on the Kedarnath trip! {brand} offers great location, warm hospitality, and very reasonable rates for both stay and food.",
+  "{brand} is located at such a beautiful and convenient location along Kedarnath Road. Very peaceful environment and food/room prices are super affordable.",
+  "If you are planning your Kedarnath Yatra, {brand} is a perfect stopover. Great natural environment, friendly staff, and very good pricing.",
+  "Superb location and very pleasant environment at {brand}. Prices are totally worth it and reasonable for travelers going towards Kedarnath.",
+  "Great experience at {brand}! Location is top-notch, environment is clean and cozy, and rates are very genuine for Kedarnath visitors.",
+  "{brand} is an ideal visit spot if you are traveling to Kedarnath. Lovely surroundings, budget-friendly stay & dining, and very good location.",
+  "Peaceful environment, easily accessible location, and very reasonable prices at {brand}. Must-visit spot for everyone coming to Kedarnath!",
+  "Clean and hygienic environment with amazing scenic views at {brand}. Highly recommended halt spot for Kedarnath pilgrims!"
 ];
 
 const bodies5_clothing = [
@@ -196,12 +198,12 @@ const outros5_mobile = [
 ];
 
 const outros5_hotel = [
-  "A must-visit stay and restaurant option in {city}!",
-  "Highly recommended to all travelers and pilgrims visiting {city}!",
-  "Will definitely stay here again whenever we visit {city}!",
-  "Easily the best halt spot on the route in {city}!",
-  "Five stars for the hospitality and food in {city}!",
-  "Superb experience in {city}, do stop by!"
+  "If you are coming to Kedarnath, definitely visit them in {city}!",
+  "Must-visit spot for anyone traveling on the Kedarnath route near {city}!",
+  "Best location and budget-friendly pricing in {city}!",
+  "Five stars for the location, environment, and rates in {city}!",
+  "Superb stopover in {city}, do visit!",
+  "Will definitely stop here again whenever we come to {city}!"
 ];
 
 
@@ -245,9 +247,9 @@ const bodies4_mobile = [
 ];
 
 const bodies4_hotel = [
-  "Good clean rooms and hot food at {brand}. Staff was polite and helpful during our stay in {city}.",
-  "Decent stay option near {city}. Rooms were comfortable, 24/7 hot water was available, and food tasted nice.",
-  "{brand} offers good food and neat room stay at reasonable prices along the {city} route."
+  "Good clean environment and pocket-friendly prices at {brand}. Location is very convenient on the Kedarnath route near {city}.",
+  "Decent stay and dining option near {city}. Peaceful location, good environment, and affordable rates.",
+  "{brand} offers nice environment and good food at reasonable prices along the {city} Kedarnath route."
 ];
 
 const outros4_generic = [
@@ -271,9 +273,9 @@ const outros4_mobile = [
 ];
 
 const outros4_hotel = [
-  "Good halt option in {city}.",
-  "Recommended stay for travelers visiting {city}.",
-  "Nice stay and food spot in {city}."
+  "Good visit spot near {city} on Kedarnath trip.",
+  "Recommended stop for travelers visiting {city} and Kedarnath.",
+  "Nice stay and food spot with good pricing in {city}."
 ];
 
 // 3-STAR TEMPLATES
