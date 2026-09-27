@@ -48,6 +48,19 @@ const intros5_mobile = [
   "Awesome collection of latest iPhones and premium phones!"
 ];
 
+const intros5_hotel = [
+  "Best place to stay on the route!",
+  "Extremely comfortable stay and delicious food!",
+  "Wonderful mountain hospitality!",
+  "Clean rooms and awesome hot food!",
+  "Highly recommended for families and pilgrims!",
+  "Had a very cozy and peaceful stay!",
+  "Top-class service on the travel route!",
+  "Very polite staff and great location!",
+  "Awesome stay experience!",
+  "Perfect halt spot with great views!"
+];
+
 // BODIES (5-Star)
 const bodies5_generic = [
   "I've visited many places, but {brand} is hands down the most exceptional {businessType} I have ever been to.",
@@ -80,30 +93,21 @@ const bodies5_ca = [
 ];
 
 const bodies5_mobile = [
-  // Rohit mentions
   "Purchased my new Apple iPhone from {brand}. Rohit bhai guided me patiently and gave me an amazing deal with original accessories!",
   "Best shop for Apple lovers! Rohit at {brand} was super helpful in recommending the right iPhone cover and tempered glass from their huge variety.",
   "Rohit at {brand} gave me the best price for my Samsung Ultra flagship phone. Very polite and knowledgeable owner!",
   "I went to {brand} to buy a new phone and Rohit helped me choose between Samsung premium segment and iPhone. Highly honest service!",
   "Rohit suggested a great premium branded perfume along with my new iPhone purchase at {brand}. Really loved the experience!",
-  
-  // Monish mentions
   "Bought the latest Samsung Galaxy flagship from {brand}. Monish bhai gave me a great discount and genuine brand warranty!",
   "Monish at {brand} showed me an unbelievable variety of Apple iPhone covers and premium accessories. Top quality store!",
   "Monish bhai is extremely polite and customer-focused. He helped me pick an awesome Apple phone and a premium branded perfume at {brand}.",
   "If you want authentic Apple products or Samsung premium phones, go straight to {brand} and meet Monish!",
   "Monish made my phone buying experience so smooth at {brand}. He even set up my new iPhone and data transfer in minutes.",
-
-  // Rohit & Monish combined
   "Rohit and Monish at {brand} are running the best mobile shop! Got an amazing deal on my new iPhone along with a fantastic branded perfume.",
   "Special thanks to Rohit bhai and Monish bhai at {brand} for giving me the best deal on Samsung premium segment phone and custom Apple covers.",
-
-  // Staff mentions
   "The staff at {brand} is super courteous and well-trained. They showed me a huge collection of iPhone covers and fast chargers patiently.",
   "Great customer service by the team at {brand}! They helped me select a premium Samsung phone and a lovely branded perfume.",
   "The staff at {brand} made sure I got 100% genuine accessories for my Apple phone with official brand warranty.",
-
-  // Product focused (Without owner/staff name)
   "Purchased my new Apple iPhone from {brand}. They have an incredible variety of iPhone covers, chargers, and even premium branded perfumes!",
   "{brand} has the best collection of Samsung premium segment phones and Apple devices in the market.",
   "If you own an iPhone, {brand} is a paradise! They have all varieties of Apple covers, screen guards, and premium accessories.",
@@ -111,6 +115,19 @@ const bodies5_mobile = [
   "Best mobile store! {brand} offers top-quality accessories, genuine Apple products, and Samsung flagships at competitive rates.",
   "Surprised to find an amazing collection of premium branded perfumes alongside latest Apple and Samsung phones at {brand}!",
   "Found the perfect cover for my iPhone at {brand}. They have the largest variety of Apple accessories in the city."
+];
+
+const bodies5_hotel = [
+  "Stayed at {brand} during our trip to {city}. The rooms were super clean, 24/7 hot water was available, and the food was freshly prepared and delicious!",
+  "{brand} is a great halt option in {city}. Clean beddings, neat washrooms, and very supportive staff. The owner guided us well about the travel route.",
+  "The food at {brand} was super fresh and felt like home. Excellent place to rest, refresh, and eat while traveling through {city}.",
+  "Great experience at {brand}! Spacious rooms, peaceful mountain view, safe vehicle parking, and continuous hot water facility.",
+  "We stopped at {brand} for hot food and room stay. The thali was piping hot and delicious, and the staff treated us with extreme warmth.",
+  "If you are traveling through {city}, {brand} is the best place for stay and dining. Very reasonable rates and top-notch hygiene.",
+  "{brand} provided awesome service. Clean room, comfortable bed, fast room service, and piping hot North Indian food.",
+  "Super clean rooms, continuous hot water supply, and delicious thali at {brand}. Will definitely visit again whenever we travel to {city}.",
+  "Stayed here with family during our yatra. The team at {brand} was very humble and helpful with local travel information. Very safe environment.",
+  "The thali and piping hot tea at {brand} was so refreshing after a long journey in {city}. Rooms are well-maintained, warm, and cozy."
 ];
 
 const bodies5_clothing = [
@@ -178,6 +195,15 @@ const outros5_mobile = [
   "The most trusted mobile store in {city}."
 ];
 
+const outros5_hotel = [
+  "A must-visit stay and restaurant option in {city}!",
+  "Highly recommended to all travelers and pilgrims visiting {city}!",
+  "Will definitely stay here again whenever we visit {city}!",
+  "Easily the best halt spot on the route in {city}!",
+  "Five stars for the hospitality and food in {city}!",
+  "Superb experience in {city}, do stop by!"
+];
+
 
 // ---------------- 4-STAR TEMPLATE POOLS ----------------
 
@@ -218,6 +244,12 @@ const bodies4_mobile = [
   "Friendly team at {brand}. Good deals on Samsung flagships and Apple devices."
 ];
 
+const bodies4_hotel = [
+  "Good clean rooms and hot food at {brand}. Staff was polite and helpful during our stay in {city}.",
+  "Decent stay option near {city}. Rooms were comfortable, 24/7 hot water was available, and food tasted nice.",
+  "{brand} offers good food and neat room stay at reasonable prices along the {city} route."
+];
+
 const outros4_generic = [
   "A great addition to {city}.",
   "Definitely worth visiting when you are in {city}.",
@@ -236,6 +268,12 @@ const outros4_mobile = [
   "One of the better mobile shops in {city}.",
   "Recommended for buying iPhones, accessories, or perfumes in {city}.",
   "Good mobile store for all {city} residents."
+];
+
+const outros4_hotel = [
+  "Good halt option in {city}.",
+  "Recommended stay for travelers visiting {city}.",
+  "Nice stay and food spot in {city}."
 ];
 
 // 3-STAR TEMPLATES
@@ -286,6 +324,8 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
     cat = 'ca';
   } else if (typeStr.includes('mobile') || typeStr.includes('phone') || typeStr.includes('cell')) {
     cat = 'mobile';
+  } else if (typeStr.includes('hotel') || typeStr.includes('room') || typeStr.includes('stay') || typeStr.includes('resort') || typeStr.includes('lodge') || typeStr.includes('guest house') || typeStr.includes('bhoomi') || typeStr.includes('dhaba')) {
+    cat = 'hotel';
   } else if (typeStr.includes('saree') || typeStr.includes('clothing') || typeStr.includes('dress') || typeStr.includes('wear')) {
     cat = 'clothing';
   } else if (typeStr.includes('restaurant') || typeStr.includes('food') || typeStr.includes('dining')) {
@@ -311,6 +351,10 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
       introsPool = intros5_mobile;
       bodiesPool = bodies5_mobile;
       outrosPool = outros5_mobile;
+    } else if (cat === 'hotel') {
+      introsPool = intros5_hotel;
+      bodiesPool = bodies5_hotel;
+      outrosPool = outros5_hotel;
     } else if (cat === 'clothing') {
       bodiesPool = bodies5_clothing;
     } else if (cat === 'restaurant') {
@@ -333,6 +377,9 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
     } else if (cat === 'mobile') {
       bodiesPool = bodies4_mobile;
       outrosPool = outros4_mobile;
+    } else if (cat === 'hotel') {
+      bodiesPool = bodies4_hotel;
+      outrosPool = outros4_hotel;
     }
   }
 
