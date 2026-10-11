@@ -1,8 +1,8 @@
-﻿// Dynamic Review Combinator logic - CATEGORY SPECIFIC, SEO OPTIMIZED & STRICT NON-REPEATING
+// Dynamic Review Combinator logic - MASSIVE POOL, CATEGORY SPECIFIC, SEO OPTIMIZED & STRICT NON-REPEATING
 
 // ---------------- 5-STAR TEMPLATE POOLS ----------------
 
-// INTROS (5-Star)
+// INTROS (5-Star) - Generic (40 items)
 const intros5_generic = [
   "Absolutely amazing experience!",
   "I am beyond impressed.",
@@ -19,9 +19,34 @@ const intros5_generic = [
   "Hands down the best decision I made today.",
   "Superb quality and excellent customer care.",
   "Incredible attention to detail.",
-  "A perfect 10/10 experience."
+  "A perfect 10/10 experience.",
+  "Could not have asked for a better experience!",
+  "Truly exceptional service and quality.",
+  "Came here on a recommendation and loved it!",
+  "Everything here was top quality and hassle-free.",
+  "I am a very, very happy customer today.",
+  "Such polite staff and outstanding hospitality.",
+  "Very pleasant and satisfying visit.",
+  "Best experience I have had in a long time!",
+  "Unmatched quality and wonderful attitude.",
+  "Honest, reliable, and super professional.",
+  "Leaving this review with a big smile!",
+  "Just visited today and had to give full stars.",
+  "From entry to exit, everything was seamless.",
+  "Worth every single rupee spent here.",
+  "They truly value their customers.",
+  "Extremely well-managed and reliable place.",
+  "You will not be disappointed visiting here.",
+  "So refreshing to see such dedication to quality.",
+  "Consistently great service every single time.",
+  "Highest recommendation possible!",
+  "A truly wonderful spot with great value.",
+  "Super efficient and very polite team.",
+  "My favorite place to visit from now on.",
+  "Totally deserved 5-star rating!"
 ];
 
+// INTROS (5-Star) - Chartered Accountant (CA) (35 items)
 const intros5_ca = [
   "Very professional and trustworthy service!",
   "Extremely satisfied with their tax guidance.",
@@ -32,9 +57,35 @@ const intros5_ca = [
   "Relieved my tax stress completely!",
   "Outstanding guidance and compliance support.",
   "Top-rated financial consultation!",
-  "A true expert in tax and auditing."
+  "A true expert in tax and auditing.",
+  "Saved us valuable time and avoided tax penalties.",
+  "Honest, transparent, and prompt financial advice.",
+  "Very responsive and skilled CA firm.",
+  "Had complex tax doubts and they resolved everything.",
+  "Extremely efficient handling of all our paperwork.",
+  "The most dependable accounting professional around.",
+  "Very patient in explaining tax laws clearly.",
+  "Flawless handling of our annual filings.",
+  "Came here for business advice and got 10/10 support.",
+  "Very polite, ethical, and knowledgeable team.",
+  "Takes care of every single compliance on time.",
+  "High level of integrity and professional expertise.",
+  "No hidden fees and completely transparent work.",
+  "Smooth and seamless consultation experience.",
+  "Always available to guide on financial queries.",
+  "Great relief having them manage our tax matters.",
+  "Solved our GST issues in record time.",
+  "Best Chartered Accountant firm we have worked with.",
+  "Super clear and accurate financial consultation.",
+  "Very thorough and meticulous in auditing.",
+  "Exceptional knowledge of the latest tax laws.",
+  "Helped our startup get registered without any pain.",
+  "My trusted financial advisor for life.",
+  "Made tax filing totally stress-free for us.",
+  "Top professional service for business owners."
 ];
 
+// INTROS (5-Star) - Mobile Shop (35 items)
 const intros5_mobile = [
   "Hands down the best mobile store around!",
   "Super fast service and 100% genuine products!",
@@ -45,9 +96,35 @@ const intros5_mobile = [
   "Unbeatable collection of accessories and perfumes!",
   "Best mobile buying experience ever!",
   "Highly satisfied with their customer service!",
-  "Awesome collection of latest iPhones and premium phones!"
+  "Awesome collection of latest iPhones and premium phones!",
+  "Walked in for a phone and left with an amazing deal!",
+  "The staff treats customers with genuine respect.",
+  "Super genuine products with official company warranty.",
+  "Unbelievable variety of iPhone covers and protectors.",
+  "Found the exact phone model I was looking for!",
+  "Honest pricing and no false promises.",
+  "Quickest and smoothest phone buying experience!",
+  "The owners here are extremely humble and helpful.",
+  "Great collection of premium phones and accessories.",
+  "My go-to store for all mobile purchases!",
+  "Surprised by their amazing perfume collection too!",
+  "Transferred all my old phone data with zero hassle.",
+  "100% authentic Apple and Samsung devices.",
+  "Got genuine accessories at very fair prices.",
+  "The customer support here is unmatched.",
+  "Very transparent and competitive pricing.",
+  "Never seen such a wide variety of mobile covers!",
+  "Friendly atmosphere and very knowledgeable staff.",
+  "Superb store layout and top-notch gadgets.",
+  "Bought my dream phone today with zero stress.",
+  "Excellent guidance without any pushy sales tactics.",
+  "Best gadget shopping experience in the area.",
+  "Extremely fast billing and polite behavior.",
+  "Full 5 stars for honesty and product authenticity.",
+  "So happy I chose this store over online shopping!"
 ];
 
+// INTROS (5-Star) - Hotel / Stay (35 items)
 const intros5_hotel = [
   "Best spot if you are coming to Kedarnath!",
   "Awesome location and super peaceful environment!",
@@ -58,9 +135,35 @@ const intros5_hotel = [
   "Great experience and pocket-friendly prices!",
   "Wonderful atmosphere and perfect location!",
   "Top-class hospitality on Kedarnath road!",
-  "Amazing place to rest, eat, and refresh!"
+  "Amazing place to rest, eat, and refresh!",
+  "Stopped here on our yatra and loved everything!",
+  "Very cozy stay with stunning mountain views.",
+  "Hot water and warm food made our journey so comfortable.",
+  "Truly refreshing halt along the Kedarnath highway.",
+  "Home-like comfort and very humble hospitality.",
+  "Extremely polite staff and clean surroundings.",
+  "Made our Kedarnath trip so much easier and relaxing.",
+  "Safe parking and peaceful ambiance for families.",
+  "Hot tea and fresh meals after a long drive was heavenly.",
+  "Super hygienic rooms and very reasonable rates.",
+  "One of the best stopovers on this entire route.",
+  "Very supportive staff with honest route guidance.",
+  "Could not have found a better stay during our trip.",
+  "Delicious food, neat rooms, and perfect location.",
+  "Ideal rest stop for pilgrims and tourists alike.",
+  "Felt so welcomed by the owner and the team.",
+  "Clean washrooms and 24/7 hot water facility.",
+  "Quiet, serene, and scenic surroundings all around.",
+  "Budget-friendly stay with premium hospitality.",
+  "Will definitely be our regular halt for every yatra.",
+  "Hot fresh food served with genuine warmth.",
+  "Completely safe and family-friendly atmosphere.",
+  "Great relief finding such a clean spot in the hills.",
+  "Superb mountain halt experience!",
+  "Full 5 stars for warmth, cleanliness, and taste!"
 ];
 
+// INTROS (5-Star) - Shopping Mall / Family Wear (40 items)
 const intros5_mall = [
   "Best complete family shopping experience!",
   "One-stop destination for all our family clothing needs!",
@@ -69,7 +172,39 @@ const intros5_mall = [
   "Hands down the best family shopping store in town!",
   "Superb collection for weddings and daily wear!",
   "Loved the variety and warm customer service!",
-  "Unmatched collection under one single roof!"
+  "Unmatched collection under one single roof!",
+  "Had such a delightful shopping experience here!",
+  "I recently went for family shopping and was so impressed!",
+  "Honestly one of the finest clothing malls around!",
+  "Came here with my parents for wedding shopping and loved it!",
+  "Just finished our festive shopping and could not be happier!",
+  "You will find literally everything you need under one roof!",
+  "Really impressed by the sheer variety and fabric quality!",
+  "A true paradise for ethnic and formal clothing lovers!",
+  "Such a pleasant shopping environment with cooperative staff!",
+  "Our family's go-to store for all clothing needs!",
+  "I rarely write reviews, but this place genuinely earned 5 stars!",
+  "Phenomenal collection and even better customer service!",
+  "From ethnic wear to shirting-suiting, everything was top-tier!",
+  "If you want genuine quality at fair prices, come straight here!",
+  "Never seen such an organized and well-stocked family mall!",
+  "Super happy with our festive shopping haul today!",
+  "Came here on a friend's recommendation and it exceeded expectations!",
+  "A truly 10/10 shopping experience for the whole family!",
+  "Was looking for traditional wear and found so many options!",
+  "Outstanding collection, courteous staff, and reasonable rates!",
+  "Worth every single rupee spent here on our clothes!",
+  "The best place to shop without running from shop to shop!",
+  "So glad we decided to visit this family shopping mall!",
+  "The customer service here sets a whole new benchmark!",
+  "Found exactly what I had been searching for everywhere!",
+  "Mind-blowing range of fabrics and ready-made clothes!",
+  "The suiting and shirting section here is simply unmatched!",
+  "My entire family found their favorite outfits in one visit!",
+  "Top-class shopping ambiance and wide variety for all ages!",
+  "Extremely polite staff who showed designs with great patience!",
+  "Best wedding shopping destination in the city!",
+  "Super organized store with trendy and traditional collections!"
 ];
 
 // BODIES (5-Star)
@@ -100,7 +235,9 @@ const bodies5_ca = [
   "From GST filing to company audit and compliances, {brand} handles all our business finances seamlessly.",
   "Extremely trustworthy CA services at {brand}. They handle all our tax compliances on time without any delay.",
   "I was worried about complex tax laws for my business, but {brand} made everything so simple and transparent.",
-  "{brand} has been managing our accounts and tax filings for years, always providing top-tier professional advice."
+  "{brand} has been managing our accounts and tax filings for years, always providing top-tier professional advice.",
+  "Helped our partnership firm resolve pending assessment notices with complete accuracy and timely submission.",
+  "Whenever tax season arrives, {brand} makes sure our returns and audits are completed well before the deadline."
 ];
 
 const bodies5_mobile = [
@@ -125,7 +262,9 @@ const bodies5_mobile = [
   "Got my new Apple phone from {brand} along with an awesome branded perfume. Everything is 100% authentic with official warranty.",
   "Best mobile store! {brand} offers top-quality accessories, genuine Apple products, and Samsung flagships at competitive rates.",
   "Surprised to find an amazing collection of premium branded perfumes alongside latest Apple and Samsung phones at {brand}!",
-  "Found the perfect cover for my iPhone at {brand}. They have the largest variety of Apple accessories in the city."
+  "Found the perfect cover for my iPhone at {brand}. They have the largest variety of Apple accessories in the city.",
+  "Replaced my damaged screen guard and bought a silicone case at {brand}. Perfect fit and very reasonable rates.",
+  "Purchased genuine fast charging adapter and cable from {brand}. Working seamlessly with my device."
 ];
 
 const bodies5_hotel = [
@@ -140,7 +279,9 @@ const bodies5_hotel = [
   "Great experience at {brand}! Location is top-notch, environment is clean and cozy, and rates are very genuine for Kedarnath visitors.",
   "{brand} is an ideal visit spot if you are traveling to Kedarnath. Lovely surroundings, budget-friendly stay & dining, and very good location.",
   "Peaceful environment, easily accessible location, and very reasonable prices at {brand}. Must-visit spot for everyone coming to Kedarnath!",
-  "Clean and hygienic environment with amazing scenic views at {brand}. Highly recommended halt spot for Kedarnath pilgrims!"
+  "Clean and hygienic environment with amazing scenic views at {brand}. Highly recommended halt spot for Kedarnath pilgrims!",
+  "Stopped for lunch and hot tea at {brand}. The food tasted fresh, kitchen hygiene was commendable, and the staff was so polite.",
+  "Stayed for the night at {brand} with family. Blankets were clean, hot water was readily available, and morning mountain view was breathtaking."
 ];
 
 const bodies5_mall = [
@@ -155,7 +296,13 @@ const bodies5_mall = [
   "{brand} has the best collection in {city}! Great range of accessories, stylish menswear, and elegant ladies wear with very affordable pricing.",
   "Whenever we need new clothes for any function, {brand} is our first choice. Complete family mall with ethnic wear, menswear, ladies wear, and accessories.",
   "Great experience shopping at {brand}! Huge variety in mens formal shirting and suiting, and my family loved the ladies ethnic collection.",
-  "From modern daily wear to traditional ethnic outfits and accessories, {brand} has everything for the entire family!"
+  "From modern daily wear to traditional ethnic outfits and accessories, {brand} has everything for the entire family!",
+  "The fabric collection for suits and shirts at {brand} is the best in the market. Huge range of colors and premium textures.",
+  "My wife loved the saree and kurti collection at {brand}, and I found top branded shirting material. Truly a complete family store.",
+  "Staff at {brand} is very helpful and never rushes you. They took out time to show us multiple designs in our exact budget.",
+  "Did our entire Diwali and wedding shopping from {brand}. Amazing variety of accessories, footwear, and designer ethnic wear.",
+  "The quality of clothing at {brand} is durable and premium. Prices are surprisingly affordable for such a lavish collection.",
+  "If you want matching accessories with your ethnic wear, {brand} has an awesome section with trendy belts, wallets, and dupattas."
 ];
 
 const bodies5_clothing = [
@@ -238,7 +385,9 @@ const outros5_mall = [
   "The ultimate shopping destination for ethnic and western wear in {city}.",
   "Will definitely visit again for our next festival shopping in {city}!",
   "Best clothing mall with reasonable prices in all of {city}.",
-  "A must-visit shopping mall for families in {city}!"
+  "A must-visit shopping mall for families in {city}!",
+  "10/10 recommendation for anyone looking for great clothes in {city}!",
+  "Proud to have such an amazing family shopping store right here in {city}."
 ];
 
 
@@ -254,7 +403,12 @@ const intros4_generic = [
   "A very pleasant experience.",
   "Good value and polite service.",
   "Good quality work.",
-  "Overall, I'm satisfied."
+  "Overall, I'm satisfied.",
+  "Had a good shopping time here.",
+  "Smooth experience and helpful staff.",
+  "Pretty satisfied with my visit today.",
+  "Good quality options available.",
+  "Dependable service and fair prices."
 ];
 
 const bodies4_generic = [
@@ -290,7 +444,8 @@ const bodies4_hotel = [
 const bodies4_mall = [
   "Good collection of ethnic wear and menswear at {brand}. Nice family shopping experience in {city}.",
   "Found good shirting and suiting fabric at {brand}. Staff was helpful and prices were reasonable.",
-  "{brand} has a nice variety of ladies wear, accessories, and menswear under one roof in {city}."
+  "{brand} has a nice variety of ladies wear, accessories, and menswear under one roof in {city}.",
+  "Decent collection of clothes and courteous staff at {brand} in {city}."
 ];
 
 const outros4_generic = [
