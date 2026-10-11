@@ -61,6 +61,17 @@ const intros5_hotel = [
   "Amazing place to rest, eat, and refresh!"
 ];
 
+const intros5_mall = [
+  "Best complete family shopping experience!",
+  "One-stop destination for all our family clothing needs!",
+  "Huge variety and top quality collection!",
+  "Amazing shopping mall with great prices!",
+  "Hands down the best family shopping store in town!",
+  "Superb collection for weddings and daily wear!",
+  "Loved the variety and warm customer service!",
+  "Unmatched collection under one single roof!"
+];
+
 // BODIES (5-Star)
 const bodies5_generic = [
   "I've visited many places, but {brand} is hands down the most exceptional {businessType} I have ever been to.",
@@ -130,6 +141,21 @@ const bodies5_hotel = [
   "{brand} is an ideal visit spot if you are traveling to Kedarnath. Lovely surroundings, budget-friendly stay & dining, and very good location.",
   "Peaceful environment, easily accessible location, and very reasonable prices at {brand}. Must-visit spot for everyone coming to Kedarnath!",
   "Clean and hygienic environment with amazing scenic views at {brand}. Highly recommended halt spot for Kedarnath pilgrims!"
+];
+
+const bodies5_mall = [
+  "Visited {brand} with my whole family. They have an incredible collection of ethnic wear, mens wear, and ladies wear all under one roof!",
+  "Best shopping mall for wedding and festive shopping! {brand} has a mind-blowing collection of designer ethnic wear, lehengas, and suits.",
+  "Bought shirting and suiting fabric along with formal menswear from {brand}. The fabric quality is top-notch and prices are very reasonable.",
+  "{brand} is a true one-stop destination! Found trendy ladies wear, latest mens collection, and perfect matching accessories easily.",
+  "The ethnic wear section at {brand} is outstanding. Beautiful traditional outfits for both men and women at great affordable rates.",
+  "Superb variety of shirting and suiting brands at {brand}. The staff was very patient and helped me pick the best fabric.",
+  "Loved the entire collection at {brand}! From casual mens wear to designer ladies wear and accessories, everything is available under one roof.",
+  "We did all our festive shopping from {brand}. Excellent quality ethnic wear, vast shirting-suiting section, and very polite staff.",
+  "{brand} has the best collection in {city}! Great range of accessories, stylish menswear, and elegant ladies wear with very affordable pricing.",
+  "Whenever we need new clothes for any function, {brand} is our first choice. Complete family mall with ethnic wear, menswear, ladies wear, and accessories.",
+  "Great experience shopping at {brand}! Huge variety in mens formal shirting and suiting, and my family loved the ladies ethnic collection.",
+  "From modern daily wear to traditional ethnic outfits and accessories, {brand} has everything for the entire family!"
 ];
 
 const bodies5_clothing = [
@@ -206,6 +232,15 @@ const outros5_hotel = [
   "Will definitely stop here again whenever we come to {city}!"
 ];
 
+const outros5_mall = [
+  "Easily the best family shopping mall in {city}!",
+  "Highly recommended for all your family clothing and wedding shopping in {city}!",
+  "The ultimate shopping destination for ethnic and western wear in {city}.",
+  "Will definitely visit again for our next festival shopping in {city}!",
+  "Best clothing mall with reasonable prices in all of {city}.",
+  "A must-visit shopping mall for families in {city}!"
+];
+
 
 // ---------------- 4-STAR TEMPLATE POOLS ----------------
 
@@ -252,6 +287,12 @@ const bodies4_hotel = [
   "{brand} offers nice environment and good food at reasonable prices along the {city} Kedarnath route."
 ];
 
+const bodies4_mall = [
+  "Good collection of ethnic wear and menswear at {brand}. Nice family shopping experience in {city}.",
+  "Found good shirting and suiting fabric at {brand}. Staff was helpful and prices were reasonable.",
+  "{brand} has a nice variety of ladies wear, accessories, and menswear under one roof in {city}."
+];
+
 const outros4_generic = [
   "A great addition to {city}.",
   "Definitely worth visiting when you are in {city}.",
@@ -276,6 +317,12 @@ const outros4_hotel = [
   "Good visit spot near {city} on Kedarnath trip.",
   "Recommended stop for travelers visiting {city} and Kedarnath.",
   "Nice stay and food spot with good pricing in {city}."
+];
+
+const outros4_mall = [
+  "Good family shopping store in {city}.",
+  "Recommended for festival and wedding shopping in {city}.",
+  "Nice clothing collection and dependable store in {city}."
 ];
 
 // 3-STAR TEMPLATES
@@ -320,12 +367,15 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
   const brand = brandName || 'this place';
   const location = city || 'the area';
   const typeStr = (businessType || '').toLowerCase();
+  const brandLower = brand.toLowerCase();
 
   let cat = 'generic';
   if (typeStr.includes('ca') || typeStr.includes('accountant') || typeStr.includes('tax') || typeStr.includes('gst') || typeStr.includes('audit')) {
     cat = 'ca';
   } else if (typeStr.includes('mobile') || typeStr.includes('phone') || typeStr.includes('cell')) {
     cat = 'mobile';
+  } else if (typeStr.includes('mall') || brandLower.includes('mall') || typeStr.includes('shopping') || brandLower.includes('shopping') || typeStr.includes('suiting') || typeStr.includes('shirting')) {
+    cat = 'mall';
   } else if (typeStr.includes('hotel') || typeStr.includes('room') || typeStr.includes('stay') || typeStr.includes('resort') || typeStr.includes('lodge') || typeStr.includes('guest house') || typeStr.includes('bhoomi') || typeStr.includes('dhaba')) {
     cat = 'hotel';
   } else if (typeStr.includes('saree') || typeStr.includes('clothing') || typeStr.includes('dress') || typeStr.includes('wear')) {
@@ -357,6 +407,10 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
       introsPool = intros5_hotel;
       bodiesPool = bodies5_hotel;
       outrosPool = outros5_hotel;
+    } else if (cat === 'mall') {
+      introsPool = intros5_mall;
+      bodiesPool = bodies5_mall;
+      outrosPool = outros5_mall;
     } else if (cat === 'clothing') {
       bodiesPool = bodies5_clothing;
     } else if (cat === 'restaurant') {
@@ -382,6 +436,9 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
     } else if (cat === 'hotel') {
       bodiesPool = bodies4_hotel;
       outrosPool = outros4_hotel;
+    } else if (cat === 'mall') {
+      bodiesPool = bodies4_mall;
+      outrosPool = outros4_mall;
     }
   }
 
