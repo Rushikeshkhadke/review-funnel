@@ -1,4 +1,4 @@
-// Dynamic Review Combinator logic - ENGLISH + HINGLISH, GENERALIZED (NO PERSONAL NAMES), SEO OPTIMIZED & STRICT NON-REPEATING
+// Dynamic Review Combinator logic - ENGLISH + HINGLISH, SMART BRAND-SPECIFIC & GENERALIZED, SEO OPTIMIZED & STRICT NON-REPEATING
 
 // ---------------- 5-STAR TEMPLATE POOLS ----------------
 
@@ -95,7 +95,7 @@ const intros5_ca = [
   "Top professional service for business owners."
 ];
 
-// INTROS (5-Star) - Mobile Shop (45 items - English & Hinglish, NO HARDCODED NAMES)
+// INTROS (5-Star) - Mobile Shop (General / Any client - 40 items)
 const intros5_mobile = [
   "Hands down the best mobile store around!",
   "Bohot hi badhiya deals aur 100% genuine phones!",
@@ -138,9 +138,16 @@ const intros5_mobile = [
   "Bina kisi jhanjhat ke data transfer aur screen guard lagwa ke diya!",
   "Branded perfumes aur covers ka collection dekh kar dil khush ho gaya!",
   "Bohot hi cooperative staff aur 100% original gadgets!",
-  "Best smartphone collection in the entire market!",
-  "Unmatched deals on premium phones and accessories!",
   "So happy I chose this store over online shopping!"
+];
+
+// INTROS (5-Star) - Specifically for Brand Express (Includes Rohit & Monish)
+const intros5_brand_express = [
+  ...intros5_mobile,
+  "Rohit bhai aur Monish bhai ka nature bohot hi helpful hai!",
+  "Special thanks to Rohit and Monish for the amazing deal!",
+  "Rohit bhai guided me so well for my new iPhone!",
+  "Monish bhai gave us the best price and original warranty!"
 ];
 
 // INTROS (5-Star) - Hotel / Stay (40 items - English & Hinglish)
@@ -324,7 +331,7 @@ const bodies5_ca = [
   "Helped our partnership firm resolve pending assessment notices with complete accuracy and timely submission."
 ];
 
-// BODIES (5-Star) - Mobile Shop (Purely {brand} and product focused, NO HARDCODED NAMES)
+// BODIES (5-Star) - Mobile Shop (General / Any client - NO NAMES)
 const bodies5_mobile = [
   "Purchased my new Apple iPhone from {brand}. The team guided me patiently and gave me an amazing deal with original accessories!",
   "Best shop for Apple lovers! The staff at {brand} was super helpful in recommending the right iPhone cover and tempered glass from their huge variety.",
@@ -347,6 +354,34 @@ const bodies5_mobile = [
   "Got my new Apple phone from {brand} along with an awesome branded perfume. Everything is 100% authentic with official warranty.",
   "{brand} se naya iPhone liya, data pura transfer karwaya aur premium perfume bhi mila. Awesome experience!",
   "{brand} ne Samsung flagship phone par genuine warranty ke sath best rate diya. Cover aur tempered glass bhi original mila.",
+  "Best mobile store! {brand} offers top-quality accessories, genuine Apple products, and Samsung flagships at competitive rates.",
+  "Surprised to find an amazing collection of premium branded perfumes alongside latest Apple and Samsung phones at {brand}!",
+  "Found the perfect cover for my iPhone at {brand}. They have the largest variety of Apple accessories in the city."
+];
+
+// BODIES (5-Star) - Specifically for Brand Express (Includes Rohit & Monish natural mix)
+const bodies5_brand_express = [
+  "Purchased my new Apple iPhone from {brand}. Rohit bhai guided me patiently and gave me an amazing deal with original accessories!",
+  "Best shop for Apple lovers! Rohit at {brand} was super helpful in recommending the right iPhone cover and tempered glass from their huge variety.",
+  "Rohit at {brand} gave me the best price for my Samsung Ultra flagship phone. Very polite and knowledgeable owner!",
+  "I went to {brand} to buy a new phone and Rohit helped me choose between Samsung premium segment and iPhone. Highly honest service!",
+  "Rohit suggested a great premium branded perfume along with my new iPhone purchase at {brand}. Really loved the experience!",
+  "Bought the latest Samsung Galaxy flagship from {brand}. Monish bhai gave me a great discount and genuine brand warranty!",
+  "Monish at {brand} showed me an unbelievable variety of Apple iPhone covers and premium accessories. Top quality store!",
+  "Monish bhai is extremely polite and customer-focused. He helped me pick an awesome Apple phone and a premium branded perfume at {brand}.",
+  "If you want authentic Apple products or Samsung premium phones, go straight to {brand} and meet Monish!",
+  "Monish made my phone buying experience so smooth at {brand}. He even set up my new iPhone and data transfer in minutes.",
+  "Rohit and Monish at {brand} are running the best mobile shop! Got an amazing deal on my new iPhone along with a fantastic branded perfume.",
+  "Special thanks to Rohit bhai and Monish bhai at {brand} for giving me the best deal on Samsung premium segment phone and custom Apple covers.",
+  "The staff at {brand} is super courteous and well-trained. They showed me a huge collection of iPhone covers and fast chargers patiently.",
+  "Great customer service by the team at {brand}! They helped me select a premium Samsung phone and a lovely branded perfume.",
+  "The staff at {brand} made sure I got 100% genuine accessories for my Apple phone with official brand warranty.",
+  "Purchased my new Apple iPhone from {brand}. They have an incredible variety of iPhone covers, chargers, and even premium branded perfumes!",
+  "{brand} has the best collection of Samsung premium segment phones and Apple devices in the market.",
+  "If you own an iPhone, {brand} is a paradise! They have all varieties of Apple covers, screen guards, and premium accessories.",
+  "Got my new Apple phone from {brand} along with an awesome branded perfume. Everything is 100% authentic with official warranty.",
+  "{brand} se naya iPhone liya, Rohit bhai ne data pura transfer karwaya aur premium perfume bhi suggest kiya. Awesome experience!",
+  "Monish bhai ne Samsung flagship phone par genuine warranty ke sath best rate diya. Cover aur tempered glass bhi original mila.",
   "Best mobile store! {brand} offers top-quality accessories, genuine Apple products, and Samsung flagships at competitive rates.",
   "Surprised to find an amazing collection of premium branded perfumes alongside latest Apple and Samsung phones at {brand}!",
   "Found the perfect cover for my iPhone at {brand}. They have the largest variety of Apple accessories in the city."
@@ -443,7 +478,7 @@ const bodies5_grocery = [
   "Best supermarket for all daily household needs. {brand} offers great discounts and fresh stock."
 ];
 
-// OUTROS (5-Star) - English & Hinglish (NO HARDCODED NAMES)
+// OUTROS (5-Star) - English & Hinglish
 const outros5_generic = [
   "If you are anywhere near {city}, you have to check them out!",
   "Easily the absolute best spot in all of {city}.",
@@ -494,6 +529,12 @@ const outros5_mobile = [
   "Best gadget store in {city}, 100% recommendation!",
   "Next time bhi saare gadgets yahin se khareedunga in {city}!",
   "Apple aur Samsung lovers ke liye {city} ki number one dukaan!"
+];
+
+const outros5_brand_express = [
+  ...outros5_mobile,
+  "Rohit bhai aur Monish bhai ka service {city} me sabse best hai!",
+  "Rohit and Monish make sure you get 100% genuine products in {city}!"
 ];
 
 const outros5_hotel = [
@@ -585,6 +626,12 @@ const bodies4_mobile = [
   "Got my new Apple phone and a nice branded perfume at {brand}. Decent experience overall.",
   "{brand} has a really good variety of Apple phone covers and accessories in {city}.",
   "Friendly team at {brand}. Good deals on Samsung flagships and Apple devices."
+];
+
+const bodies4_brand_express = [
+  ...bodies4_mobile,
+  "Bought an iPhone cover from {brand}. Rohit and the staff were polite and gave good suggestions.",
+  "Good collection of Samsung premium segment phones at {brand}. Monish was helpful."
 ];
 
 const bodies4_hotel = [
@@ -687,6 +734,7 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
   const location = city || 'the area';
   const typeStr = (businessType || '').toLowerCase();
   const brandLower = brand.toLowerCase();
+  const isBrandExpress = brandLower.includes('brand express') || brandLower.includes('brand xpress') || brandLower.includes('brandexpress');
 
   let cat = 'generic';
   if (typeStr.includes('ca') || typeStr.includes('accountant') || typeStr.includes('tax') || typeStr.includes('gst') || typeStr.includes('audit')) {
@@ -721,9 +769,9 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
       bodiesPool = bodies5_ca;
       outrosPool = outros5_ca;
     } else if (cat === 'mobile') {
-      introsPool = intros5_mobile;
-      bodiesPool = bodies5_mobile;
-      outrosPool = outros5_mobile;
+      introsPool = isBrandExpress ? intros5_brand_express : intros5_mobile;
+      bodiesPool = isBrandExpress ? bodies5_brand_express : bodies5_mobile;
+      outrosPool = isBrandExpress ? outros5_brand_express : outros5_mobile;
     } else if (cat === 'hotel') {
       introsPool = intros5_hotel;
       bodiesPool = bodies5_hotel;
@@ -756,7 +804,7 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
       bodiesPool = bodies4_ca;
       outrosPool = outros4_ca;
     } else if (cat === 'mobile') {
-      bodiesPool = bodies4_mobile;
+      bodiesPool = isBrandExpress ? bodies4_brand_express : bodies4_mobile;
       outrosPool = outros4_mobile;
     } else if (cat === 'hotel') {
       bodiesPool = bodies4_hotel;
@@ -772,7 +820,7 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
 
   let text = "";
   if (rating === 5 || rating === 4) {
-    const keyPrefix = `review_cycle_${rating}__${cat}`;
+    const keyPrefix = `review_cycle_${rating}__${cat}${isBrandExpress ? '_bx' : ''}`;
     const intro = getNonRepeatingRandom(introsPool, `${keyPrefix}_intros`);
     const body = getNonRepeatingRandom(bodiesPool, `${keyPrefix}_bodies`);
     const outro = getNonRepeatingRandom(outrosPool, `${keyPrefix}_outros`);
