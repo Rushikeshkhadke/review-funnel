@@ -256,7 +256,7 @@ const intros5_jewellery = [
   "Honest rates, clear billing, and certified hallmark gold!",
   "The craft and finishing on their jewellery is breathtaking!",
   "Found the dream bridal jewellery set for my wedding!",
-  "Super polite staff and transparent gold exchange policy!",
+  "Super polite staff and very honest billing!",
   "Such a luxurious showroom ambiance and genuine hospitality!",
   "High purity standards and mind-blowing craftsmanship!",
   "Purchased our engagement diamond ring here and we love it!",
@@ -271,17 +271,17 @@ const intros5_jewellery = [
   "Great variety of lightweight daily wear and heavy bridal sets!",
   "The design finishing and sparkle of the diamonds is incredible!",
   "Warm hospitality and very patient sales executives!",
-  "Best exchange value on old gold with zero hassle!",
+  "Honest gold rates and wonderful shopping experience!",
   "I rarely review, but this jewellery store truly deserves 5 stars!",
   "Beautiful showroom with endless unique designs!",
   "Everything from billing to hallmarking is so crystal clear!",
   "A memorable shopping visit for our anniversary!",
   "Very trustworthy and well-reputed jewellery brand!",
-  "Top-notch customer care and lifetime exchange confidence!",
+  "Top-notch customer care and complete peace of mind!",
   "The most sparkling diamond collection I have ever seen!",
   "100% BIS Hallmarked gold aur transparent billing mili yahan!",
   "Shadi ki poori jewellery yahin se banwayi, sabne bohot tareef ki!",
-  "Old gold exchange me sabse accha rate aur testing mili!",
+  "Gold jewellery par sabse accha rate aur accurate purity mili!",
   "Staff ka behaviour bohot hi humble aur cooperative tha!",
   "Designs itne pyare the ki choose karna mushkil ho gaya!",
   "Diamond jewellery ki shine aur finishing lajawab hai!",
@@ -425,7 +425,7 @@ const bodies5_jewellery = [
   "Purchased 916 BIS hallmarked bridal gold jewellery from {brand}. The purity is 100% verified and the intricate craftsmanship is just breathtaking!",
   "Bought our diamond engagement rings and a solitaire pendant from {brand}. All diamonds are certified, sparkling, and reasonably priced.",
   "{brand} has the most stunning collection of antique temple jewellery, Kundan, and modern gold designs. Complete transparent billing with HUID hallmarking.",
-  "Exchanged our old gold at {brand} and got the absolute best value with genuine testing. Very transparent wastage and making charges.",
+  "Purchased gold jewellery from {brand} with 100% genuine testing. Very transparent wastage and making charges.",
   "The staff at {brand} is remarkably patient and respectful. They showed us dozens of gold necklace and bangle designs until we found the perfect one.",
   "Bought lightweight diamond earrings and a daily wear gold chain from {brand}. Finishing is supreme and designs are super trendy.",
   "Did all our daughter's wedding jewellery shopping from {brand}. The bridal necklace, matha patti, and kadas were the center of attraction!",
@@ -441,7 +441,7 @@ const bodies5_jewellery = [
   "Got the exact diamond carat certificate and laser HUID hallmark on our gold ornaments at {brand}. Highly ethical jewellers.",
   "Loved the variety of gold bangles, kadas, and Italian chains at {brand}. High quality polish and durable build.",
   "{brand} se bridal set aur mangalsutra khareeda. Finishing ekdum perfect hai aur 100% 916 BIS hallmark milta hai.",
-  "Old gold exchange me {brand} ne bilkul transparent weighing aur best rate diya. Making charges bhi bohot genuine the.",
+  "{brand} ne bilkul transparent weighing aur honest gold rate diya. Making charges bhi bohot genuine the.",
   "Diamond ring purchase ki {brand} se, certificate ke sath diamonds ki clarity aur shine lajawab hai.",
   "Staff ne bohot patience ke sath har ek jewellery design dikhaya. Aisa warm atmosphere kisi aur showroom me nahi dekha."
 ];
@@ -650,7 +650,7 @@ const bodies4_mall = [
 const bodies4_jewellery = [
   "Good collection of hallmarked gold and certified diamond jewellery at {brand}. Courteous staff and transparent billing in {city}.",
   "Purchased gold earrings and chain from {brand}. Purity was checked and designs were quite nice.",
-  "Decent exchange value on old gold and good diamond ring options at {brand} in {city}."
+  "Good collection of diamond rings and gold ornaments at {brand} in {city}."
 ];
 
 const outros4_generic = [
