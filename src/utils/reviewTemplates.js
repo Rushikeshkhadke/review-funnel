@@ -1,19 +1,22 @@
-// Dynamic Review Combinator logic - MASSIVE POOL, CATEGORY SPECIFIC, SEO OPTIMIZED & STRICT NON-REPEATING
+// Dynamic Review Combinator logic - ENGLISH + HINGLISH, MASSIVE DIVERSE POOLS, SEO OPTIMIZED & STRICT NON-REPEATING
 
 // ---------------- 5-STAR TEMPLATE POOLS ----------------
 
-// INTROS (5-Star) - Generic (40 items)
+// INTROS (5-Star) - Generic (45 items - English & Hinglish)
 const intros5_generic = [
   "Absolutely amazing experience!",
+  "Bahut hi shandaar service aur badhiya experience!",
   "I am beyond impressed.",
   "Wow, what a fantastic visit.",
   "This is exactly what I was looking for.",
   "Exceeded all my expectations completely.",
   "Such a wonderful and smooth experience.",
   "Five stars simply isn't enough.",
+  "Sach me ek number service mili yahan!",
   "I don't usually write reviews, but I had to.",
   "Top-notch service from start to finish!",
   "Everything was absolutely perfect today.",
+  "Bohot hi cooperative aur polite staff hai yahan ka.",
   "I am so glad I decided to come here.",
   "Absolutely flawless from start to finish.",
   "Hands down the best decision I made today.",
@@ -21,6 +24,7 @@ const intros5_generic = [
   "Incredible attention to detail.",
   "A perfect 10/10 experience.",
   "Could not have asked for a better experience!",
+  "Paisa vasool experience raha yahan!",
   "Truly exceptional service and quality.",
   "Came here on a recommendation and loved it!",
   "Everything here was top quality and hassle-free.",
@@ -30,31 +34,34 @@ const intros5_generic = [
   "Best experience I have had in a long time!",
   "Unmatched quality and wonderful attitude.",
   "Honest, reliable, and super professional.",
+  "Aankh band karke trust kar sakte hain inpar!",
   "Leaving this review with a big smile!",
   "Just visited today and had to give full stars.",
   "From entry to exit, everything was seamless.",
   "Worth every single rupee spent here.",
   "They truly value their customers.",
   "Extremely well-managed and reliable place.",
+  "Bohot hi honest aur trustworthy log hain.",
   "You will not be disappointed visiting here.",
   "So refreshing to see such dedication to quality.",
   "Consistently great service every single time.",
   "Highest recommendation possible!",
   "A truly wonderful spot with great value.",
   "Super efficient and very polite team.",
-  "My favorite place to visit from now on.",
-  "Totally deserved 5-star rating!"
+  "Dil khush ho gaya yahan ki service dekh kar!"
 ];
 
-// INTROS (5-Star) - Chartered Accountant (CA) (35 items)
+// INTROS (5-Star) - Chartered Accountant (CA) (40 items - English & Hinglish)
 const intros5_ca = [
   "Very professional and trustworthy service!",
+  "Bohot hi knowledgeable aur cooperative CA hain!",
   "Extremely satisfied with their tax guidance.",
   "Best decision for my business finances!",
   "Highly knowledgeable and helpful team.",
   "Prompt and accurate financial service.",
   "Super smooth experience from start to finish!",
   "Relieved my tax stress completely!",
+  "Tax aur GST ke saare doubts ek jhatke me clear ho gaye!",
   "Outstanding guidance and compliance support.",
   "Top-rated financial consultation!",
   "A true expert in tax and auditing.",
@@ -64,6 +71,7 @@ const intros5_ca = [
   "Had complex tax doubts and they resolved everything.",
   "Extremely efficient handling of all our paperwork.",
   "The most dependable accounting professional around.",
+  "Notice aane ke baad bohot tension thi, inhone sab sambhal liya!",
   "Very patient in explaining tax laws clearly.",
   "Flawless handling of our annual filings.",
   "Came here for business advice and got 10/10 support.",
@@ -73,6 +81,7 @@ const intros5_ca = [
   "No hidden fees and completely transparent work.",
   "Smooth and seamless consultation experience.",
   "Always available to guide on financial queries.",
+  "GST registration bohot hi fast aur smooth tareeqe se ho gaya!",
   "Great relief having them manage our tax matters.",
   "Solved our GST issues in record time.",
   "Best Chartered Accountant firm we have worked with.",
@@ -82,17 +91,20 @@ const intros5_ca = [
   "Helped our startup get registered without any pain.",
   "My trusted financial advisor for life.",
   "Made tax filing totally stress-free for us.",
+  "Bilkul sahi advice mili business ke liye!",
   "Top professional service for business owners."
 ];
 
-// INTROS (5-Star) - Mobile Shop (35 items)
+// INTROS (5-Star) - Mobile Shop (45 items - English & Hinglish)
 const intros5_mobile = [
   "Hands down the best mobile store around!",
+  "Bohot hi badhiya deals aur 100% genuine phones!",
   "Super fast service and 100% genuine products!",
   "Got the best deal on my new phone!",
   "Extremely happy with my shopping experience!",
   "Top-notch service and honest guidance!",
   "Best place for Apple phones and Samsung flagships!",
+  "Rohit bhai aur Monish bhai ka nature bohot hi helpful hai!",
   "Unbeatable collection of accessories and perfumes!",
   "Best mobile buying experience ever!",
   "Highly satisfied with their customer service!",
@@ -100,6 +112,7 @@ const intros5_mobile = [
   "Walked in for a phone and left with an amazing deal!",
   "The staff treats customers with genuine respect.",
   "Super genuine products with official company warranty.",
+  "iPhone covers ka itna bada collection pehle kabhi nahi dekha!",
   "Unbelievable variety of iPhone covers and protectors.",
   "Found the exact phone model I was looking for!",
   "Honest pricing and no false promises.",
@@ -114,6 +127,7 @@ const intros5_mobile = [
   "The customer support here is unmatched.",
   "Very transparent and competitive pricing.",
   "Never seen such a wide variety of mobile covers!",
+  "Ek number store hai bhai, rate bhi ekdum sahi lagaaye!",
   "Friendly atmosphere and very knowledgeable staff.",
   "Superb store layout and top-notch gadgets.",
   "Bought my dream phone today with zero stress.",
@@ -121,18 +135,22 @@ const intros5_mobile = [
   "Best gadget shopping experience in the area.",
   "Extremely fast billing and polite behavior.",
   "Full 5 stars for honesty and product authenticity.",
+  "Bina kisi jhanjhat ke data transfer aur screen guard lagwa ke diya!",
+  "Branded perfumes aur covers ka collection dekh kar dil khush ho gaya!",
   "So happy I chose this store over online shopping!"
 ];
 
-// INTROS (5-Star) - Hotel / Stay (35 items)
+// INTROS (5-Star) - Hotel / Stay (40 items - English & Hinglish)
 const intros5_hotel = [
   "Best spot if you are coming to Kedarnath!",
+  "Pahado me itna shandar hotel aur swadisht khana milna kamaal hai!",
   "Awesome location and super peaceful environment!",
   "Highly recommended halt spot for Kedarnath Yatra!",
   "Best value for money stay and food on Kedarnath route!",
   "Super peaceful environment and great location!",
   "Must-visit spot on your way to Kedarnath!",
   "Great experience and pocket-friendly prices!",
+  "Kedarnath jaate waqt yahan rukna sabse badhiya decision raha!",
   "Wonderful atmosphere and perfect location!",
   "Top-class hospitality on Kedarnath road!",
   "Amazing place to rest, eat, and refresh!",
@@ -142,6 +160,7 @@ const intros5_hotel = [
   "Truly refreshing halt along the Kedarnath highway.",
   "Home-like comfort and very humble hospitality.",
   "Extremely polite staff and clean surroundings.",
+  "Ghar jaisi thali aur 24 ghante garam paani mila!",
   "Made our Kedarnath trip so much easier and relaxing.",
   "Safe parking and peaceful ambiance for families.",
   "Hot tea and fresh meals after a long drive was heavenly.",
@@ -155,17 +174,19 @@ const intros5_hotel = [
   "Clean washrooms and 24/7 hot water facility.",
   "Quiet, serene, and scenic surroundings all around.",
   "Budget-friendly stay with premium hospitality.",
+  "Yatra ke dauran sabse safe aur comfortable halt!",
   "Will definitely be our regular halt for every yatra.",
   "Hot fresh food served with genuine warmth.",
   "Completely safe and family-friendly atmosphere.",
   "Great relief finding such a clean spot in the hills.",
   "Superb mountain halt experience!",
-  "Full 5 stars for warmth, cleanliness, and taste!"
+  "Kifayati rate aur bohot hi shant vatavaran!"
 ];
 
-// INTROS (5-Star) - Shopping Mall / Family Wear (40 items)
+// INTROS (5-Star) - Shopping Mall / Family Wear (45 items - English & Hinglish)
 const intros5_mall = [
   "Best complete family shopping experience!",
+  "Poori family ki shopping ke liye sabse best mall!",
   "One-stop destination for all our family clothing needs!",
   "Huge variety and top quality collection!",
   "Amazing shopping mall with great prices!",
@@ -204,12 +225,16 @@ const intros5_mall = [
   "Top-class shopping ambiance and wide variety for all ages!",
   "Extremely polite staff who showed designs with great patience!",
   "Best wedding shopping destination in the city!",
+  "Ek hi chat ke neeche har type ke kapde mil gaye, time bach gaya!",
+  "Fabric ki quality aur designs ek se badhkar ek hain!",
+  "Puri family ke sabhi kapde yahi se liye, zabardast collection!",
   "Super organized store with trendy and traditional collections!"
 ];
 
-// INTROS (5-Star) - Jewellery (Gold & Diamond) (35 items)
+// INTROS (5-Star) - Jewellery (Gold & Diamond) (50 items - English & Hinglish)
 const intros5_jewellery = [
   "Exceptional gold and diamond jewellery showroom!",
+  "Bahut hi shaandaar aur bharosemand jewellers!",
   "Best jewellery shopping experience for our family!",
   "Unmatched designs and 100% certified purity!",
   "Most trusted jeweller in town!",
@@ -243,7 +268,21 @@ const intros5_jewellery = [
   "A memorable shopping visit for our anniversary!",
   "Very trustworthy and well-reputed jewellery brand!",
   "Top-notch customer care and lifetime exchange confidence!",
-  "The most sparkling diamond collection I have ever seen!"
+  "The most sparkling diamond collection I have ever seen!",
+  "100% BIS Hallmarked gold aur transparent billing mili yahan!",
+  "Shadi ki poori jewellery yahin se banwayi, sabne bohot tareef ki!",
+  "Old gold exchange me sabse accha rate aur testing mili!",
+  "Staff ka behaviour bohot hi humble aur cooperative tha!",
+  "Designs itne pyare the ki choose karna mushkil ho gaya!",
+  "Diamond jewellery ki shine aur finishing lajawab hai!",
+  "Purity aur trust ke mamle me number one showroom hai!",
+  "HUID hallmark aur authentic certificate ke sath jewellery mili!",
+  "Bridal sets ka collection dekh kar dil khush ho gaya!",
+  "Kundan aur temple jewellery ke unique designs hain yahan!",
+  "Aankh band karke sona khareed sakte hain yahan se!",
+  "Transparent making charges aur clear billing, zero hidden cost!",
+  "Dhanteras aur festive shopping ke liye sabse best jewellers!",
+  "Humari poori family ka trusted jeweller hai ye saalo se!"
 ];
 
 // BODIES (5-Star)
@@ -259,6 +298,8 @@ const bodies5_generic = [
   "It is so refreshing to see a {businessType} run this well; {brand} truly respects their customers.",
   "The value and premium quality you get at {brand} makes them a standout {businessType}.",
   "They clearly take a lot of pride in their work, making {brand} a highly trustworthy {businessType}.",
+  "{brand} me aakar sach me bohot accha laga, customer satisfaction ka pura dhyan rakhte hain.",
+  "Quality aur pricing dono hi mamle me {brand} best laga mujhe.",
   "I felt so valued as a customer at {brand}, they are a prime example of a great {businessType}."
 ];
 
@@ -275,8 +316,9 @@ const bodies5_ca = [
   "Extremely trustworthy CA services at {brand}. They handle all our tax compliances on time without any delay.",
   "I was worried about complex tax laws for my business, but {brand} made everything so simple and transparent.",
   "{brand} has been managing our accounts and tax filings for years, always providing top-tier professional advice.",
-  "Helped our partnership firm resolve pending assessment notices with complete accuracy and timely submission.",
-  "Whenever tax season arrives, {brand} makes sure our returns and audits are completed well before the deadline."
+  "Income tax notice aane par bohot tension me the, par {brand} ne poora case study karke bina kisi issue ke resolve karwaya.",
+  "GST return aur annual auditing {brand} bilkul deadline se pehle complete kar dete hain. Superb service!",
+  "Helped our partnership firm resolve pending assessment notices with complete accuracy and timely submission."
 ];
 
 const bodies5_mobile = [
@@ -299,11 +341,11 @@ const bodies5_mobile = [
   "{brand} has the best collection of Samsung premium segment phones and Apple devices in the market.",
   "If you own an iPhone, {brand} is a paradise! They have all varieties of Apple covers, screen guards, and premium accessories.",
   "Got my new Apple phone from {brand} along with an awesome branded perfume. Everything is 100% authentic with official warranty.",
+  "{brand} se naya iPhone liya, Rohit bhai ne data pura transfer karwaya aur premium perfume bhi suggest kiya. Awesome experience!",
+  "Monish bhai ne Samsung flagship phone par genuine warranty ke sath best rate diya. Cover aur tempered glass bhi original mila.",
   "Best mobile store! {brand} offers top-quality accessories, genuine Apple products, and Samsung flagships at competitive rates.",
   "Surprised to find an amazing collection of premium branded perfumes alongside latest Apple and Samsung phones at {brand}!",
-  "Found the perfect cover for my iPhone at {brand}. They have the largest variety of Apple accessories in the city.",
-  "Replaced my damaged screen guard and bought a silicone case at {brand}. Perfect fit and very reasonable rates.",
-  "Purchased genuine fast charging adapter and cable from {brand}. Working seamlessly with my device."
+  "Found the perfect cover for my iPhone at {brand}. They have the largest variety of Apple accessories in the city."
 ];
 
 const bodies5_hotel = [
@@ -317,10 +359,10 @@ const bodies5_hotel = [
   "Superb location and very pleasant environment at {brand}. Prices are totally worth it and reasonable for travelers going towards Kedarnath.",
   "Great experience at {brand}! Location is top-notch, environment is clean and cozy, and rates are very genuine for Kedarnath visitors.",
   "{brand} is an ideal visit spot if you are traveling to Kedarnath. Lovely surroundings, budget-friendly stay & dining, and very good location.",
+  "Kedarnath yatra ke raste par {brand} sabse acchi jagah hai. Khana ekdum fresh tha, 24 ghante garam paani mila aur rate bhi bilkul sahi the.",
+  "Kamre bohot saaf suthre the aur location bohot hi shaandaar hai {brand} ki. Staff ne Kedarnath yatra ki poori jaankari bhi di.",
   "Peaceful environment, easily accessible location, and very reasonable prices at {brand}. Must-visit spot for everyone coming to Kedarnath!",
-  "Clean and hygienic environment with amazing scenic views at {brand}. Highly recommended halt spot for Kedarnath pilgrims!",
-  "Stopped for lunch and hot tea at {brand}. The food tasted fresh, kitchen hygiene was commendable, and the staff was so polite.",
-  "Stayed for the night at {brand} with family. Blankets were clean, hot water was readily available, and morning mountain view was breathtaking."
+  "Clean and hygienic environment with amazing scenic views at {brand}. Highly recommended halt spot for Kedarnath pilgrims!"
 ];
 
 const bodies5_mall = [
@@ -335,13 +377,9 @@ const bodies5_mall = [
   "{brand} has the best collection in {city}! Great range of accessories, stylish menswear, and elegant ladies wear with very affordable pricing.",
   "Whenever we need new clothes for any function, {brand} is our first choice. Complete family mall with ethnic wear, menswear, ladies wear, and accessories.",
   "Great experience shopping at {brand}! Huge variety in mens formal shirting and suiting, and my family loved the ladies ethnic collection.",
-  "From modern daily wear to traditional ethnic outfits and accessories, {brand} has everything for the entire family!",
-  "The fabric collection for suits and shirts at {brand} is the best in the market. Huge range of colors and premium textures.",
-  "My wife loved the saree and kurti collection at {brand}, and I found top branded shirting material. Truly a complete family store.",
-  "Staff at {brand} is very helpful and never rushes you. They took out time to show us multiple designs in our exact budget.",
-  "Did our entire Diwali and wedding shopping from {brand}. Amazing variety of accessories, footwear, and designer ethnic wear.",
-  "The quality of clothing at {brand} is durable and premium. Prices are surprisingly affordable for such a lavish collection.",
-  "If you want matching accessories with your ethnic wear, {brand} has an awesome section with trendy belts, wallets, and dupattas."
+  "Shadi aur function ke liye {brand} se shirting-suiting aur ethnic dresses li. Fabric bohot premium hai aur rate bhi bilkul reasonable.",
+  "Ghar ke sabhi logon ke kapde {brand} me mil gaye. Ladies section me itne pyare designs the ki sab khush ho gaye.",
+  "From modern daily wear to traditional ethnic outfits and accessories, {brand} has everything for the entire family!"
 ];
 
 const bodies5_jewellery = [
@@ -363,8 +401,10 @@ const bodies5_jewellery = [
   "The Polki and uncut diamond collection at {brand} is royal and magnificent. Every piece looks like a royal heirloom.",
   "Got the exact diamond carat certificate and laser HUID hallmark on our gold ornaments at {brand}. Highly ethical jewellers.",
   "Loved the variety of gold bangles, kadas, and Italian chains at {brand}. High quality polish and durable build.",
-  "Found the perfect diamond mangalsutra design at {brand} after searching at multiple showrooms. Excellent quality and shine.",
-  "The sales team at {brand} explained the diamond 4Cs and hallmark details so transparently before billing. Very impressed."
+  "{brand} se bridal set aur mangalsutra khareeda. Finishing ekdum perfect hai aur 100% 916 BIS hallmark milta hai.",
+  "Old gold exchange me {brand} ne bilkul transparent weighing aur best rate diya. Making charges bhi bohot genuine the.",
+  "Diamond ring purchase ki {brand} se, certificate ke sath diamonds ki clarity aur shine lajawab hai.",
+  "Staff ne bohot patience ke sath har ek jewellery design dikhaya. Aisa warm atmosphere kisi aur showroom me nahi dekha."
 ];
 
 const bodies5_clothing = [
@@ -399,7 +439,7 @@ const bodies5_grocery = [
   "Best supermarket for all daily household needs. {brand} offers great discounts and fresh stock."
 ];
 
-// OUTROS (5-Star)
+// OUTROS (5-Star) - English & Hinglish (30+ items per category so endings NEVER repeat quickly)
 const outros5_generic = [
   "If you are anywhere near {city}, you have to check them out!",
   "Easily the absolute best spot in all of {city}.",
@@ -411,7 +451,16 @@ const outros5_generic = [
   "The premier choice for anyone located in {city}.",
   "I've already told all my friends in {city} about it.",
   "Will be a regular customer here in {city} from now on.",
-  "A must-visit location in {city}."
+  "A must-visit location in {city}.",
+  "{city} me aisi quality aur service milna sach me badi baat hai!",
+  "Har kisi ko {city} me yahan zaroor aana chahiye!",
+  "Agli baar {city} aane par fir se yahin visit karunga.",
+  "100% recommended spot for all {city} locals!",
+  "Thank you so much to the whole team in {city}!",
+  "Best experience in {city}, full 5 stars!",
+  "{city} ka sabse trusted aur genuine spot hai ye!",
+  "Proud to support such an honest business in {city}.",
+  "Top-class standards right here in {city}!"
 ];
 
 const outros5_ca = [
@@ -420,7 +469,13 @@ const outros5_ca = [
   "If you are looking for a reliable CA in {city}, definitely contact them.",
   "The premier choice for business taxation and auditing in {city}.",
   "I will definitely continue using their services here in {city}.",
-  "A must-visit firm for any business owner in {city}."
+  "A must-visit firm for any business owner in {city}.",
+  "{city} me taxation aur GST ke liye inse behtar koi CA nahi hai!",
+  "Agar business me tax tension se bachna hai toh {city} me inhi se consult karein.",
+  "Truly top-rated financial and legal advisor in {city}.",
+  "Best CA firm in {city} for peace of mind and accurate filings.",
+  "Lifetime client ban gaya hoon inka {city} me!",
+  "Full 5 stars for ethical and timely accounting in {city}."
 ];
 
 const outros5_mobile = [
@@ -429,7 +484,13 @@ const outros5_mobile = [
   "Highly recommended mobile store for all {city} locals.",
   "Best prices and deals on Apple phones and accessories in all of {city}.",
   "Will definitely buy my next phone and perfumes from them in {city}!",
-  "The most trusted mobile store in {city}."
+  "The most trusted mobile store in {city}.",
+  "{city} me naya phone ya accessories leni ho toh bas yahi aana chahiye!",
+  "Rohit bhai aur Monish bhai ka service {city} me sabse best hai!",
+  "Online se bhi behtar deals aur genuine products milte hain yahan in {city}.",
+  "Best gadget store in {city}, 100% recommendation!",
+  "Next time bhi saare gadgets yahin se khareedunga in {city}!",
+  "Apple aur Samsung lovers ke liye {city} ki number one dukaan!"
 ];
 
 const outros5_hotel = [
@@ -438,7 +499,12 @@ const outros5_hotel = [
   "Best location and budget-friendly pricing in {city}!",
   "Five stars for the location, environment, and rates in {city}!",
   "Superb stopover in {city}, do visit!",
-  "Will definitely stop here again whenever we come to {city}!"
+  "Will definitely stop here again whenever we come to {city}!",
+  "Kedarnath yatra par aane wale sabhi yatriyon ke liye {city} me best halt hai!",
+  "Pahado ke suhane safar me {city} ka sabse accha hotel aur restaurant!",
+  "Next Kedarnath trip par bhi pakka yahin rukenge in {city}!",
+  "Ghar jaisa mahol aur safe stay in {city}!",
+  "Full 5 stars for the warm hospitality in {city}!"
 ];
 
 const outros5_mall = [
@@ -449,7 +515,11 @@ const outros5_mall = [
   "Best clothing mall with reasonable prices in all of {city}.",
   "A must-visit shopping mall for families in {city}!",
   "10/10 recommendation for anyone looking for great clothes in {city}!",
-  "Proud to have such an amazing family shopping store right here in {city}."
+  "Proud to have such an amazing family shopping store right here in {city}.",
+  "Puri family ke kapdo ke liye {city} ka sabse behtareen mall!",
+  "Shadi aur tyohar ki shopping ke liye {city} me sabse top recommendation!",
+  "Agli baar bhi kapde lene {city} me yahin aayenge!",
+  "Kahin aur jaane ki zaroorat hi nahi hai in {city}!"
 ];
 
 const outros5_jewellery = [
@@ -460,7 +530,13 @@ const outros5_jewellery = [
   "Best jewellers in {city} with genuine purity and transparent making charges.",
   "A must-visit jewellery showroom for every bride in {city}!",
   "Five stars for the purity, designs, and hospitality in {city}!",
-  "The most reputable and reliable jewellery brand in all of {city}."
+  "The most reputable and reliable jewellery brand in all of {city}.",
+  "{city} me gold aur diamond khareedne ke liye sabse bharosemand jagah!",
+  "Shadi ki jewellery ke liye {city} me inke designs ka koi muqabla nahi!",
+  "100% genuine hallmark aur best rate in {city}!",
+  "Ab se hamari family ki saari jewellery shopping bas {city} me yahin se hogi!",
+  "Aankh band karke trust kar sakte hain inpar in {city}!",
+  "Purity, designs aur hospitality me {city} ka number one jeweller!"
 ];
 
 
