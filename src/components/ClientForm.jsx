@@ -104,6 +104,7 @@ export default function ClientForm({ onClose, onComplete, initialData }) {
                 <option>Salon</option>
                 <option>Clothing/Saree</option>
                 <option>Shopping Mall / Family Wear</option>
+                <option>Jewellery (Gold & Diamond)</option>
                 <option>Mobile Shop</option>
                 <option>Grocery</option>
                 <option>Chartered Accountant (CA)</option>

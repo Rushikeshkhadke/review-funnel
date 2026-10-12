@@ -207,6 +207,45 @@ const intros5_mall = [
   "Super organized store with trendy and traditional collections!"
 ];
 
+// INTROS (5-Star) - Jewellery (Gold & Diamond) (35 items)
+const intros5_jewellery = [
+  "Exceptional gold and diamond jewellery showroom!",
+  "Best jewellery shopping experience for our family!",
+  "Unmatched designs and 100% certified purity!",
+  "Most trusted jeweller in town!",
+  "Had the most delightful jewellery buying experience!",
+  "Came here for wedding jewellery and totally amazed!",
+  "Stunning diamond collection and pure hallmarked gold!",
+  "A true paradise for gold and diamond lovers!",
+  "Extremely satisfied with our jewellery purchase today!",
+  "Honest rates, clear billing, and certified hallmark gold!",
+  "The craft and finishing on their jewellery is breathtaking!",
+  "Found the dream bridal jewellery set for my wedding!",
+  "Super polite staff and transparent gold exchange policy!",
+  "Such a luxurious showroom ambiance and genuine hospitality!",
+  "High purity standards and mind-blowing craftsmanship!",
+  "Purchased our engagement diamond ring here and we love it!",
+  "The best gold and diamond showroom without a doubt!",
+  "Always our first and only choice for buying gold!",
+  "Completely transparent making charges and certified diamonds!",
+  "Fell in love with their antique gold and diamond collection!",
+  "Superb collection of both traditional and modern jewellery!",
+  "A 10/10 experience buying hallmarked gold jewellery!",
+  "Honest, reliable, and authentic jewellers!",
+  "Felt so confident and happy buying gold here!",
+  "Great variety of lightweight daily wear and heavy bridal sets!",
+  "The design finishing and sparkle of the diamonds is incredible!",
+  "Warm hospitality and very patient sales executives!",
+  "Best exchange value on old gold with zero hassle!",
+  "I rarely review, but this jewellery store truly deserves 5 stars!",
+  "Beautiful showroom with endless unique designs!",
+  "Everything from billing to hallmarking is so crystal clear!",
+  "A memorable shopping visit for our anniversary!",
+  "Very trustworthy and well-reputed jewellery brand!",
+  "Top-notch customer care and lifetime exchange confidence!",
+  "The most sparkling diamond collection I have ever seen!"
+];
+
 // BODIES (5-Star)
 const bodies5_generic = [
   "I've visited many places, but {brand} is hands down the most exceptional {businessType} I have ever been to.",
@@ -305,6 +344,29 @@ const bodies5_mall = [
   "If you want matching accessories with your ethnic wear, {brand} has an awesome section with trendy belts, wallets, and dupattas."
 ];
 
+const bodies5_jewellery = [
+  "Purchased 916 BIS hallmarked bridal gold jewellery from {brand}. The purity is 100% verified and the intricate craftsmanship is just breathtaking!",
+  "Bought our diamond engagement rings and a solitaire pendant from {brand}. All diamonds are certified, sparkling, and reasonably priced.",
+  "{brand} has the most stunning collection of antique temple jewellery, Kundan, and modern gold designs. Complete transparent billing with HUID hallmarking.",
+  "Exchanged our old gold at {brand} and got the absolute best value with genuine testing. Very transparent wastage and making charges.",
+  "The staff at {brand} is remarkably patient and respectful. They showed us dozens of gold necklace and bangle designs until we found the perfect one.",
+  "Bought lightweight diamond earrings and a daily wear gold chain from {brand}. Finishing is supreme and designs are super trendy.",
+  "Did all our daughter's wedding jewellery shopping from {brand}. The bridal necklace, matha patti, and kadas were the center of attraction!",
+  "If you are looking for certified diamond jewellery or genuine hallmarked gold, {brand} is the most reliable and honest showroom.",
+  "The custom jewellery making at {brand} is exceptional! They crafted our necklace set exactly as per our custom reference on time.",
+  "{brand} offers an extensive collection of mangalsutras, gold chains, and certified diamond rings at genuine market rates.",
+  "I really appreciate the transparency in gold purity testing and competitive making charges at {brand}. Full peace of mind.",
+  "From heavy traditional bridal jewellery to sleek modern diamond bracelets, {brand} has everything under one roof.",
+  "Purchased a certified diamond necklace from {brand}. The cut, clarity, and shine are extraordinary, and the pricing was very fair.",
+  "The owners and staff at {brand} treat every customer like royalty. Welcoming environment and 100% authentic hallmarked gold.",
+  "Always buy our Dhanteras and Akshaya Tritiya gold from {brand}. Consistent purity, trustworthy weight, and wonderful designs.",
+  "The Polki and uncut diamond collection at {brand} is royal and magnificent. Every piece looks like a royal heirloom.",
+  "Got the exact diamond carat certificate and laser HUID hallmark on our gold ornaments at {brand}. Highly ethical jewellers.",
+  "Loved the variety of gold bangles, kadas, and Italian chains at {brand}. High quality polish and durable build.",
+  "Found the perfect diamond mangalsutra design at {brand} after searching at multiple showrooms. Excellent quality and shine.",
+  "The sales team at {brand} explained the diamond 4Cs and hallmark details so transparently before billing. Very impressed."
+];
+
 const bodies5_clothing = [
   "Purchased beautiful sarees and ethnic wear from {brand}. Amazing collection, authentic fabric, and very reasonable prices.",
   "The wedding saree and ethnic wear collection at {brand} is magnificent! Great customer service and friendly staff.",
@@ -390,6 +452,17 @@ const outros5_mall = [
   "Proud to have such an amazing family shopping store right here in {city}."
 ];
 
+const outros5_jewellery = [
+  "Easily the most trusted gold and diamond jewellery showroom in {city}!",
+  "Highly recommended for all your wedding and festive jewellery shopping in {city}!",
+  "The premier destination for certified diamonds and hallmarked gold in {city}.",
+  "Will definitely buy all our future family jewellery from them in {city}!",
+  "Best jewellers in {city} with genuine purity and transparent making charges.",
+  "A must-visit jewellery showroom for every bride in {city}!",
+  "Five stars for the purity, designs, and hospitality in {city}!",
+  "The most reputable and reliable jewellery brand in all of {city}."
+];
+
 
 // ---------------- 4-STAR TEMPLATE POOLS ----------------
 
@@ -448,6 +521,12 @@ const bodies4_mall = [
   "Decent collection of clothes and courteous staff at {brand} in {city}."
 ];
 
+const bodies4_jewellery = [
+  "Good collection of hallmarked gold and certified diamond jewellery at {brand}. Courteous staff and transparent billing in {city}.",
+  "Purchased gold earrings and chain from {brand}. Purity was checked and designs were quite nice.",
+  "Decent exchange value on old gold and good diamond ring options at {brand} in {city}."
+];
+
 const outros4_generic = [
   "A great addition to {city}.",
   "Definitely worth visiting when you are in {city}.",
@@ -478,6 +557,12 @@ const outros4_mall = [
   "Good family shopping store in {city}.",
   "Recommended for festival and wedding shopping in {city}.",
   "Nice clothing collection and dependable store in {city}."
+];
+
+const outros4_jewellery = [
+  "Good jeweller to visit in {city}.",
+  "Recommended jewellery store in {city}.",
+  "Dependable gold and diamond showroom in {city}."
 ];
 
 // 3-STAR TEMPLATES
@@ -527,6 +612,8 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
   let cat = 'generic';
   if (typeStr.includes('ca') || typeStr.includes('accountant') || typeStr.includes('tax') || typeStr.includes('gst') || typeStr.includes('audit')) {
     cat = 'ca';
+  } else if (typeStr.includes('jewel') || typeStr.includes('gold') || typeStr.includes('diamond') || brandLower.includes('jewel') || brandLower.includes('gold') || brandLower.includes('diamond') || brandLower.includes('ornament')) {
+    cat = 'jewellery';
   } else if (typeStr.includes('mobile') || typeStr.includes('phone') || typeStr.includes('cell')) {
     cat = 'mobile';
   } else if (typeStr.includes('mall') || brandLower.includes('mall') || typeStr.includes('shopping') || brandLower.includes('shopping') || typeStr.includes('suiting') || typeStr.includes('shirting')) {
@@ -566,6 +653,10 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
       introsPool = intros5_mall;
       bodiesPool = bodies5_mall;
       outrosPool = outros5_mall;
+    } else if (cat === 'jewellery') {
+      introsPool = intros5_jewellery;
+      bodiesPool = bodies5_jewellery;
+      outrosPool = outros5_jewellery;
     } else if (cat === 'clothing') {
       bodiesPool = bodies5_clothing;
     } else if (cat === 'restaurant') {
@@ -594,6 +685,9 @@ export const getRandomReview = (businessType, rating, brandName, city) => {
     } else if (cat === 'mall') {
       bodiesPool = bodies4_mall;
       outrosPool = outros4_mall;
+    } else if (cat === 'jewellery') {
+      bodiesPool = bodies4_jewellery;
+      outrosPool = outros4_jewellery;
     }
   }
 
